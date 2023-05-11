@@ -26,8 +26,6 @@ public class CameraController : MonoBehaviour
         float newXRotation = transform.eulerAngles.x - newRotationValue.x;
         transform.eulerAngles = new Vector3(newXRotation, transform.eulerAngles.y - newRotationValue.y, 0);
 
-        Debug.Log("Rotation: " + transform.eulerAngles);
-
         InputHandler.instance.MoveDirection = new Vector3(0, this.transform.eulerAngles.y, 0);
     }
 

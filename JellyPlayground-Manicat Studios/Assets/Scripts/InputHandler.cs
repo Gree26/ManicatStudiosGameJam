@@ -27,6 +27,8 @@ public class InputHandler : MonoBehaviour
 
     public Action Interact;
 
+
+
     private void Awake()
     {
         if (singletonInstance == null)
