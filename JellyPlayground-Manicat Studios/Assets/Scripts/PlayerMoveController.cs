@@ -15,6 +15,7 @@ public class PlayerMoveController : MonoBehaviour
     private float _capSpeed = 15;
 
     private float _moveSpeed = 1;
+    public int checkpointIndex;
 
     private float _moveSpeedDrag = -.01f;
 
@@ -29,6 +30,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         _myRigidBody = this.GetComponent<Rigidbody>();
         InputHandler.instance.MoveInput += NewMoveInput;
+        checkpointIndex = 0;
     }
 
     private void Update()
