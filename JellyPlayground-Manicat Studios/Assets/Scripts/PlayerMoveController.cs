@@ -9,11 +9,13 @@ public class PlayerMoveController : MonoBehaviour
 
     [SerializeField]
     private float _moveSpeed = 1;
+    public int checkpointIndex;
 
     private void Start()
     {
         _myRigidBody = this.GetComponent<Rigidbody>();
         InputHandler.instance.MoveInput += NewMoveInput;
+        checkpointIndex = 0;
     }
 
     private void NewMoveInput(Vector2 moveValue)
