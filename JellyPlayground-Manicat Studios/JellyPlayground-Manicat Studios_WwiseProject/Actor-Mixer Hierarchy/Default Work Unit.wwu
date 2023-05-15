@@ -55,7 +55,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-11</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -97,6 +97,11 @@
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -217,7 +222,9 @@
 						</Sound>
 						<Sound Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" ShortID="551987699">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<RTPCList>
 										<RTPC Name="" ID="{57C9E077-CDFF-4AA5-8B64-81FBD3D24E93}" ShortID="59063691">
@@ -233,12 +240,13 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-287</YPos>
+														<YPos>-238</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Exp1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>100</XPos>
-														<YPos>621</YPos>
+														<XPos>12</XPos>
+														<YPos>339</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -246,8 +254,17 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="68"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Player" ID="{8E6CA89B-85F0-4667-8205-AF3D263B942E}" WorkUnitID="{27DB3EB1-239C-497F-B562-0A3F1F6EDD62}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
 								</Reference>
