@@ -442,7 +442,7 @@ MonoBehaviour:
   _maxMoveSpeed: 12
   _capSpeed: 20
   checkpointIndex: 0
-  _moveSpeedAcceleration: 0.02
+  _moveSpeedAcceleration: 0.07
   jumpEvent:
     idInternal: 0
     valueGuidInternal: 

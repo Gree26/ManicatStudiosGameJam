@@ -126,6 +126,7 @@ public class PlayerMoveController : MonoBehaviour
     private void Slide(bool isSlidiing)
     {
         this.transform.localScale = (isSlidiing) ? new Vector3(_scale.x, _scale.y / 2, _scale.z) : _scale;
+        this.transform.localPosition = (isSlidiing) ? new Vector3(transform.localPosition.x, transform.localPosition.y - _scale.y / 4, transform.localPosition.z) : new Vector3(transform.localPosition.x, transform.localPosition.y + _scale.y / 4, transform.localPosition.z);
         crouchEvent.Post(this.gameObject);
         if (!DetectStanding())
             return;
