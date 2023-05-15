@@ -55,7 +55,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-11</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -97,6 +97,11 @@
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -187,6 +192,11 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -217,7 +227,37 @@
 						</Sound>
 						<Sound Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" ShortID="551987699">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{3962FE71-6C9A-4058-8789-3A5C88071252}" ShortID="219379348">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Acceleration_Parameter" ID="{0B96CA26-DADC-4A2F-A080-182248CCD4ED}" WorkUnitID="{D8C4E9F9-B822-4EDE-AFC6-31E3387356D0}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{7DA7ABE6-1462-41C6-AAA2-4B70AC31656C}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-1.5118</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>13</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<RTPCList>
 										<RTPC Name="" ID="{57C9E077-CDFF-4AA5-8B64-81FBD3D24E93}" ShortID="59063691">
@@ -233,12 +273,13 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-287</YPos>
+														<YPos>-238</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>100</XPos>
-														<YPos>621</YPos>
+														<XPos>13</XPos>
+														<YPos>509</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -246,8 +287,17 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="68"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Player" ID="{8E6CA89B-85F0-4667-8205-AF3D263B942E}" WorkUnitID="{27DB3EB1-239C-497F-B562-0A3F1F6EDD62}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
 								</Reference>

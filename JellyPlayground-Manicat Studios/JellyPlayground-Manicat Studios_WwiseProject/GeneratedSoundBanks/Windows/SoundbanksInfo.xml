@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3975544225">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2869253600">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -93,12 +93,12 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017475316" Language="SFX" Hash="2496419510">
+		<SoundBank Id="3017475316" Language="SFX" Hash="1293376470">
 			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
 			<ShortName>SfxBank</ShortName>
 			<Path>SfxBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="794457826" Name="Play_Acceleration" ObjectPath="\Events\Default Work Unit\Play_Acceleration" DurationType="Infinite">
+				<Event Id="794457826" Name="Play_Acceleration" ObjectPath="\Events\Default Work Unit\Play_Acceleration" MaxAttenuation="100." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="1032208743" Language="SFX">
 							<ShortName>SFX_Acceleration-001.wav</ShortName>
