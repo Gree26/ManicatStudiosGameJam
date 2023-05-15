@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A4C16E95-FCB1-4530-B78F-32A2A3A415A1}" SchemaVersion="103">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{A4C16E95-FCB1-4530-B78F-32A2A3A415A1}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A4C16E95-FCB1-4530-B78F-32A2A3A415A1}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Music_States" ID="{BCF4E616-1045-48BA-83D5-EE3091C779BE}">
+					<ChildrenList>
+						<State Name="None" ID="{96BE1702-B210-43E5-BE6E-B009EF70F347}"/>
+						<State Name="Loading" ID="{AB8C8228-20B3-483E-A0E5-AC7D8162527E}"/>
+						<State Name="Sec1" ID="{2A19FF29-DCB0-45E7-927F-1E6D65AA3469}"/>
+						<State Name="Sec2" ID="{7D5E6E24-704D-4956-9FC2-3451345CA25A}"/>
+						<State Name="End" ID="{4840527A-21F2-4B64-BFE4-9285123670CC}"/>
+						<State Name="PauseMenuMusic" ID="{A282911F-A260-4B35-ABA4-660913B6A150}"/>
+						<State Name="TitleMenuMusic" ID="{4B2A1330-2EA9-4294-A10D-00227B45D0C2}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

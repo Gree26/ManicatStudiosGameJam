@@ -1,0 +1,19 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1690668539	Music_States			\Default Work Unit\Music_States	
+
+State	ID	Name	State Group			Notes
+	508769081	TitleMenuMusic	Music_States			
+	529726532	End	Music_States			
+	585140289	Sec1	Music_States			
+	585140290	Sec2	Music_States			
+	748895195	None	Music_States			
+	2478971905	PauseMenuMusic	Music_States			
+	3573931707	Loading	Music_States			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+
