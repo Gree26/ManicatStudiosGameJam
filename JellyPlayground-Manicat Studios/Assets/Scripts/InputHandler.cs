@@ -17,6 +17,7 @@ public class InputHandler : MonoBehaviour
         }
     }
 
+    [HideInInspector]
     public Vector3 MoveDirection = Vector3.forward;
 
     public Action<Vector2> MouseInput;
@@ -24,6 +25,8 @@ public class InputHandler : MonoBehaviour
     public Action<Vector2> MoveInput;
 
     public Action Jump;
+
+    public Action<bool> Slide;
 
     public Action Interact;
 
@@ -78,6 +81,15 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Interact?.Invoke();
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Slide?.Invoke(true);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            Slide?.Invoke(false);
         }
     }
 
