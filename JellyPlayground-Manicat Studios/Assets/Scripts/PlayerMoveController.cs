@@ -55,6 +55,9 @@ public class PlayerMoveController : MonoBehaviour
         InputHandler.instance.Slide += Slide;
         _scale = this.transform.localScale;
         checkpointIndex = 0;
+
+        accelerationEvent.Post(this.gameObject);
+        
     }
 
     private void Update()
@@ -68,7 +71,7 @@ public class PlayerMoveController : MonoBehaviour
 
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.forward * Mathf.Abs( positionModifier.y) * _moveSpeed * Time.deltaTime));
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.right * positionModifier.x * _maxMoveSpeed / 2 * Time.deltaTime));
-
+        Debug.Log(_moveSpeed);
         if (DetectCollision())
         {
             _myRigidBody.velocity = new Vector3(-this.transform.forward.x * 10, 3, -this.transform.forward.y * 10) * (_moveSpeed/ _capSpeed);
@@ -76,6 +79,8 @@ public class PlayerMoveController : MonoBehaviour
             GameDataManager.isSpeed = false;
             isStunned = true;
         }
+        RTPC_Acceleration.SetValue(this.gameObject,_moveSpeed);
+        
     }
 
     private void Jump()
@@ -113,11 +118,15 @@ public class PlayerMoveController : MonoBehaviour
         GameDataManager.isSpeed = (isGreater)? true:false;
 
         _moveSpeed = (isGreater)? Mathf.Clamp(_moveSpeed + newValue, minValue, _capSpeed) : Mathf.Clamp(_moveSpeed + newValue, minValue, maxValue);
+        
+
+
     }
 
     private void Slide(bool isSlidiing)
     {
         this.transform.localScale = (isSlidiing) ? new Vector3(_scale.x, _scale.y / 2, _scale.z) : _scale;
+        this.transform.localPosition = (isSlidiing) ? new Vector3(transform.localPosition.x, transform.localPosition.y - _scale.y / 4, transform.localPosition.z) : new Vector3(transform.localPosition.x, transform.localPosition.y + _scale.y / 4, transform.localPosition.z);
         crouchEvent.Post(this.gameObject);
         if (!DetectStanding())
             return;

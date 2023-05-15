@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3975544225">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2869253600">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3017428748" Language="SFX" Hash="2341179460">
+		<SoundBank Id="3017428748" Language="SFX" Hash="3761761919">
 			<ObjectPath>\SoundBanks\Default Work Unit\MusicBank</ObjectPath>
 			<ShortName>MusicBank</ShortName>
 			<Path>MusicBank.bnk</Path>
@@ -93,12 +93,12 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017475316" Language="SFX" Hash="2496419510">
+		<SoundBank Id="3017475316" Language="SFX" Hash="3453286131">
 			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
 			<ShortName>SfxBank</ShortName>
 			<Path>SfxBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="794457826" Name="Play_Acceleration" ObjectPath="\Events\Default Work Unit\Play_Acceleration" DurationType="Infinite">
+				<Event Id="794457826" Name="Play_Acceleration" ObjectPath="\Events\Default Work Unit\Play_Acceleration" MaxAttenuation="100." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="1032208743" Language="SFX">
 							<ShortName>SFX_Acceleration-001.wav</ShortName>
