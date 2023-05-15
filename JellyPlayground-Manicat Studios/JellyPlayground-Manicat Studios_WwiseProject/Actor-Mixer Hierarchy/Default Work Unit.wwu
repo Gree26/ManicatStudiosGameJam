@@ -55,7 +55,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -244,12 +244,18 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-1.5118</YPos>
+														<YPos>-22.87072</YPos>
 														<Flags>5</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>8.96289</XPos>
+														<YPos>-0.22804</YPos>
+														<Flags>0</Flags>
 													</Point>
 													<Point>
 														<XPos>13</XPos>
-														<YPos>0</YPos>
+														<YPos>0.6477</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -273,13 +279,19 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-238</YPos>
+														<YPos>-30</YPos>
 														<Flags>5</Flags>
 														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
+														<XPos>10.18854</XPos>
+														<YPos>193</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
 														<XPos>13</XPos>
-														<YPos>509</YPos>
+														<YPos>334</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
@@ -290,7 +302,7 @@
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="68"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
