@@ -710,6 +710,9 @@
 							<ObjectLists/>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{D086C3E6-E613-44B0-A726-56E7A4397ACF}" ShortID="412791527">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{F61DA221-AD8E-467A-BA0F-56A34CA9DF8E}" ShortID="399246061">
 											<PropertyList>
@@ -719,7 +722,7 @@
 										</MusicPlaylistItem>
 										<MusicPlaylistItem Name="" ID="{9A7ACD37-A9ED-4B83-A8FB-25B4674D1F57}" ShortID="312038117">
 											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="LoopCount" Type="int16" Value="4"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="JellyRacer_Print_125bpm_Sec2_02" ID="{E6103DFD-57A8-49E2-B7E0-25C2B3AFB4F5}"/>
