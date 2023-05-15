@@ -6,15 +6,38 @@ public class SpeedEffect : MonoBehaviour
 {
     [SerializeField]
     private GameObject _speedEffectObject;
+    private ParticleSystem _speedEffectSystem;
+    private Camera _cam;
+    private float _baseFov;
+    [SerializeField]
+    private float _fovIncrease = 10f;
 
     private void Start()
     {
         GameDataManager.isSpeedChanged += makeVisable;
+        _cam = this.GetComponent<Camera>();
+        _baseFov = _cam.fieldOfView;
+        _speedEffectSystem = _speedEffectObject.GetComponent<ParticleSystem>();
     }
 
     private void makeVisable(bool isItVisable)
     {
-        Debug.Log("ZOOM!!!!");
         _speedEffectObject.SetActive(isItVisable);
+
+        if (isItVisable)
+        {
+            StartCoroutine(ZoomFov());
+        }
+        
+    }
+
+    private IEnumerator ZoomFov()
+    {
+        _cam.fieldOfView = _baseFov + _fovIncrease;
+        while (_cam.fieldOfView != _baseFov)
+        {
+            _cam.fieldOfView = Mathf.Clamp(_cam.fieldOfView-.01f, _baseFov, _baseFov + _fovIncrease);
+            yield return new WaitForEndOfFrame();
+        }
     }
 }

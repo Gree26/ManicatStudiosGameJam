@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6CB0D297-0768-4388-ADBC-6225748ABB35}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{6CB0D297-0768-4388-ADBC-6225748ABB35}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="SFX" ID="{4A8921D5-8B10-4669-8D4C-7ED8E226DF2C}" ShortID="307481719">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{44FEA071-99DB-4670-B5C0-5A6C9D8A7266}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Break-001" ID="{9451E86B-7BD4-4D1B-B075-C3AF02ABC133}" ShortID="821784036">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Break-001" ID="{7FA6DEDE-7E1D-4089-A3FD-39DCAEA2B4C3}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Break-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="226018163"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Break-001" ID="{7FA6DEDE-7E1D-4089-A3FD-39DCAEA2B4C3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Jump-001" ID="{1C336803-48DB-4750-815A-B78CAFEDC0DA}" ShortID="698356871">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Jump-001" ID="{FFDC71C7-D0E9-4D32-A1D6-95D08155D676}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Jump-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="635465996"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Jump-001" ID="{FFDC71C7-D0E9-4D32-A1D6-95D08155D676}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" ShortID="551987699">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Acceleration-001" ID="{38E3F13D-7C51-4766-9851-FCD09D921265}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Acceleration-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1032208743"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Acceleration-001" ID="{38E3F13D-7C51-4766-9851-FCD09D921265}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Squeeze-001" ID="{68E4C5EE-A6C9-47CC-8DB0-7AE79BC631DA}" ShortID="53685276">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Squeeze-001" ID="{7D5EA8B7-29EA-4C15-90BA-A2E904A828C2}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Squeeze-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="884275306"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Squeeze-001" ID="{7D5EA8B7-29EA-4C15-90BA-A2E904A828C2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_BerryCollected-001" ID="{D3CE6D87-8FB7-44D0-8B3D-778A987C233C}" ShortID="319589262">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_BerryCollected-001" ID="{510CABDE-61BC-4C31-9507-0CD2B3F689A5}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_BerryCollected-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="287735734"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_BerryCollected-001" ID="{510CABDE-61BC-4C31-9507-0CD2B3F689A5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Slide-001" ID="{029576E7-BB31-45FB-ACC6-3D487D26490B}" ShortID="148164465">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Slide-001" ID="{6B8498B5-3754-495A-9C0A-D5317F457D49}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Slide-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="387000028"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Slide-001" ID="{6B8498B5-3754-495A-9C0A-D5317F457D49}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Collision-001" ID="{F0CA5A46-CDF9-4D65-9566-F9791A5ABABE}" ShortID="1055408426">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Collision-001" ID="{50658DFF-20F4-4F32-B839-0B0A58D3B81B}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Collision-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="158642868"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Collision-001" ID="{50658DFF-20F4-4F32-B839-0B0A58D3B81B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+				<ActorMixer Name="UI" ID="{12022326-9160-439C-ABC1-C27DED840705}" ShortID="38626830">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="UI" ID="{D3A72534-2596-49ED-83EA-528AB934FE7F}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="UI_Click-001" ID="{F7362416-B513-4658-81F6-E66372FC1A8C}" ShortID="319120819">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{44FEA071-99DB-4670-B5C0-5A6C9D8A7266}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_UI_Click-001" ID="{5966DF41-EA8D-4E94-8807-AC6F1ED9E888}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_UI_Click-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="121089721"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_UI_Click-001" ID="{5966DF41-EA8D-4E94-8807-AC6F1ED9E888}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_CountdownTimer-003" ID="{E499CA14-6C2B-4F6A-A4B3-B11C3462F4ED}" ShortID="327114906">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{44FEA071-99DB-4670-B5C0-5A6C9D8A7266}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_CountdownTimer-003" ID="{D338126E-A1BD-45A1-AC72-8AB76C8680BD}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_CountdownTimer-003.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="747142140"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_CountdownTimer-003" ID="{D338126E-A1BD-45A1-AC72-8AB76C8680BD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_CountdownTimer-004" ID="{6A3B9A34-70A4-4861-B559-B32029F5133C}" ShortID="811498496">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{44FEA071-99DB-4670-B5C0-5A6C9D8A7266}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_CountdownTimer-004" ID="{508C1228-E84D-451C-8520-3F887C95C5CF}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_CountdownTimer-004.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="200497049"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_CountdownTimer-004" ID="{508C1228-E84D-451C-8520-3F887C95C5CF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_CountdownTimer-001" ID="{6C0347D9-9583-495B-AC9B-2BFC0D85D857}" ShortID="880169731">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{44FEA071-99DB-4670-B5C0-5A6C9D8A7266}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_CountdownTimer-001" ID="{DFBC6258-547E-4346-A74B-98A43658668B}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_CountdownTimer-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="811080598"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_CountdownTimer-001" ID="{DFBC6258-547E-4346-A74B-98A43658668B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_CountdownTimer-002" ID="{4CCE30E6-97E2-4F38-B675-7D175366BD9E}" ShortID="1068009734">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{44FEA071-99DB-4670-B5C0-5A6C9D8A7266}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_CountdownTimer-002" ID="{D54C5683-8136-4194-802D-418551AEF7F8}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_CountdownTimer-002.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="87160608"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_CountdownTimer-002" ID="{D54C5683-8136-4194-802D-418551AEF7F8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
