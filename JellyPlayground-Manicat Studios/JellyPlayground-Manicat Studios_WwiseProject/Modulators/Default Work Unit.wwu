@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E9368C77-9082-46CE-BD7C-5FEE9F066182}" SchemaVersion="103">
 	<Modulators>
-		<WorkUnit Name="Default Work Unit" ID="{E9368C77-9082-46CE-BD7C-5FEE9F066182}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E9368C77-9082-46CE-BD7C-5FEE9F066182}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorLfo Name="LFO_Acceleration" ID="{4D500922-940F-4C74-ABC2-9DCDCFC0A589}" ShortID="1047893173">
+					<PropertyList>
+						<Property Name="LfoFrequency" Type="Real64" Value="8.46"/>
+						<Property Name="LfoSmoothing" Type="Real64" Value="100"/>
+						<Property Name="LfoWaveform" Type="int32" Value="5"/>
+					</PropertyList>
+				</ModulatorLfo>
+			</ChildrenList>
+		</WorkUnit>
 	</Modulators>
 </WwiseDocument>

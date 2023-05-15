@@ -228,6 +228,11 @@
 						<Sound Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" ShortID="551987699">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>39</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<RTPCList>
@@ -304,6 +309,32 @@
 									<ValueList>
 										<Value>-5</Value>
 									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{FC8AB26F-E925-4230-AABF-931ABBE07A82}" ShortID="980153995">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="LFO_Acceleration" ID="{4D500922-940F-4C74-ABC2-9DCDCFC0A589}" WorkUnitID="{E9368C77-9082-46CE-BD7C-5FEE9F066182}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{E3EF1C19-34ED-4E41-B124-B9B826E38FF6}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-2.12029</YPos>
+														<Flags>21</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>2.38633</YPos>
+														<Flags>53</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
