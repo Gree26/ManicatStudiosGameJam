@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1599205760">
+		<SoundBank Id="1355168291" Language="SFX" Hash="460494602">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -93,7 +93,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017475316" Language="SFX" Hash="953381240">
+		<SoundBank Id="3017475316" Language="SFX" Hash="1293376470">
 			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
 			<ShortName>SfxBank</ShortName>
 			<Path>SfxBank.bnk</Path>

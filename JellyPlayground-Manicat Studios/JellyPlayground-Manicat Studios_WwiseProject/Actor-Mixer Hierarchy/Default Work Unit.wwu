@@ -101,7 +101,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -192,6 +192,11 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -224,6 +229,34 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{3962FE71-6C9A-4058-8789-3A5C88071252}" ShortID="219379348">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Acceleration_Parameter" ID="{0B96CA26-DADC-4A2F-A080-182248CCD4ED}" WorkUnitID="{D8C4E9F9-B822-4EDE-AFC6-31E3387356D0}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{7DA7ABE6-1462-41C6-AAA2-4B70AC31656C}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-1.5118</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>13</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<RTPCList>
@@ -242,11 +275,11 @@
 														<XPos>0</XPos>
 														<YPos>-238</YPos>
 														<Flags>5</Flags>
-														<SegmentShape>Exp1</SegmentShape>
+														<SegmentShape>Log1</SegmentShape>
 													</Point>
 													<Point>
-														<XPos>12</XPos>
-														<YPos>339</YPos>
+														<XPos>13</XPos>
+														<YPos>509</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>
