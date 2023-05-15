@@ -93,7 +93,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017475316" Language="SFX" Hash="852980">
+		<SoundBank Id="3017475316" Language="SFX" Hash="3488489256">
 			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
 			<ShortName>SfxBank</ShortName>
 			<Path>SfxBank.bnk</Path>

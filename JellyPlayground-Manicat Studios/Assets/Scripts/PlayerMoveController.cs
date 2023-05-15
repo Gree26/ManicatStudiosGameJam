@@ -30,6 +30,9 @@ public class PlayerMoveController : MonoBehaviour
 
     private Vector3 _scale = Vector3.one;
 
+    //Sound
+    [SerializeField] AK.Wwise.Event jumpEvent;
+
     private bool isStunned
     {
         set
@@ -75,6 +78,8 @@ public class PlayerMoveController : MonoBehaviour
         if (DetectStanding())
         {
             _myRigidBody.velocity = Vector3.up * 4;
+            jumpEvent.Post(this.gameObject);
+            
         }
     }
 

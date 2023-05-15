@@ -41,6 +41,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="SFX_Jump-001" ID="{1C336803-48DB-4750-815A-B78CAFEDC0DA}" ShortID="698356871">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
