@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2938606796">
+		<SoundBank Id="1355168291" Language="SFX" Hash="38949308">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3017428748" Language="SFX" Hash="2550102822">
+		<SoundBank Id="3017428748" Language="SFX" Hash="304538468">
 			<ObjectPath>\SoundBanks\Default Work Unit\MusicBank</ObjectPath>
 			<ShortName>MusicBank</ShortName>
 			<Path>MusicBank.bnk</Path>
@@ -82,7 +82,7 @@
 			<StateGroups>
 				<StateGroup Id="1690668539" Name="Music_States" ObjectPath="\States\Default Work Unit\Music_States" GUID="{BCF4E616-1045-48BA-83D5-EE3091C779BE}">
 					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music_States\None" GUID="{96BE1702-B210-43E5-BE6E-B009EF70F347}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music_States\None" GUID="{FCF5BB6B-919D-4E72-AF03-FB17FFFE511B}"/>
 						<State Id="3573931707" Name="Loading" ObjectPath="\States\Default Work Unit\Music_States\Loading" GUID="{AB8C8228-20B3-483E-A0E5-AC7D8162527E}"/>
 						<State Id="585140289" Name="Sec1" ObjectPath="\States\Default Work Unit\Music_States\Sec1" GUID="{2A19FF29-DCB0-45E7-927F-1E6D65AA3469}"/>
 						<State Id="585140290" Name="Sec2" ObjectPath="\States\Default Work Unit\Music_States\Sec2" GUID="{7D5E6E24-704D-4956-9FC2-3451345CA25A}"/>
@@ -92,6 +92,21 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3017475316" Language="SFX" Hash="852980">
+			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
+			<ShortName>SfxBank</ShortName>
+			<Path>SfxBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Play_Jump" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="635465996" Language="SFX">
+							<ShortName>SFX_Jump-001.wav</ShortName>
+							<Path>SFX\SFX_Jump-001_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

@@ -8,6 +8,7 @@
 						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
 					</PropertyList>
 					<ChildrenList>
+						<State Name="None" ID="{FCF5BB6B-919D-4E72-AF03-FB17FFFE511B}"/>
 						<State Name="Loading" ID="{AB8C8228-20B3-483E-A0E5-AC7D8162527E}"/>
 						<State Name="Sec1" ID="{2A19FF29-DCB0-45E7-927F-1E6D65AA3469}"/>
 						<State Name="Sec2" ID="{7D5E6E24-704D-4956-9FC2-3451345CA25A}"/>
