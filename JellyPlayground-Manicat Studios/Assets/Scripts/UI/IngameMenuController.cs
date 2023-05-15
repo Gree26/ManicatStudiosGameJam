@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(UiController))]
 public class IngameMenuController : MonoBehaviour
@@ -18,12 +19,13 @@ public class IngameMenuController : MonoBehaviour
         InputHandler.instance.Escape += Back;
     }
 
-    private void Back()
+    public void Back()
     {
         if (_uiController.IsStackEmpty())
         {
             InputHandler.instance.LockMouse(false);
             _uiController.PushPage(_pauseMenu);
+            Time.timeScale = 0;
         }
         else
         {
@@ -31,6 +33,7 @@ public class IngameMenuController : MonoBehaviour
             if (_uiController.IsStackEmpty())
             {
                 InputHandler.instance.LockMouse(true);
+                Time.timeScale = 1;
             }
         }
     }
@@ -38,5 +41,19 @@ public class IngameMenuController : MonoBehaviour
     public void OpenInfoPage()
     {
         _uiController.PushPage(_infoMenu);
+    }
+
+    public void ContinueGame()
+    {
+        _uiController.PopAllPages();
+        InputHandler.instance.LockMouse(true);
+        Time.timeScale = 1;
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1;
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 }

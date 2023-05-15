@@ -123,7 +123,7 @@ public class UiController : MonoBehaviour
     /// </summary>
     public void PopAllPages()
     {
-        for (int i = 1; i < PageStack.Count; i++)
+        for (int i = 0; i <= PageStack.Count; i++)
         {
             PopPage();
         }

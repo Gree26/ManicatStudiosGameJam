@@ -222,7 +222,7 @@ public class Page : MonoBehaviour
     {
         //_audioSource.enabled = true;
 
-        WaitForSeconds wait = new WaitForSeconds(clip.length);
+        WaitForSecondsRealtime wait = new WaitForSecondsRealtime(clip.length);
 
         //_audioSource.PlayOneShot(clip);
 
