@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class UiController : MonoBehaviour
 {
@@ -22,15 +21,19 @@ public class UiController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (FirstFocusItem != null)
-        {
-            EventSystem.current.SetSelectedGameObject(FirstFocusItem);
-        }
-
         if (initialPage != null)
         {
             PushPage(initialPage);
         }
+    }
+
+    public bool IsStackEmpty()
+    {
+        if(PageStack.Count==0 || PageStack == null)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -103,6 +106,11 @@ public class UiController : MonoBehaviour
             {
                 newCurrentPage.Enter(false);
             }
+        }
+        else if (PageStack.Count == 1)
+        {
+            Page page = PageStack.Pop();
+            page.Exit(true);
         }
         else
         {

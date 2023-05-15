@@ -21,7 +21,7 @@ public enum Direction
 
 public class Page : MonoBehaviour
 {
-    private AudioSource _audioSource;
+    //private AudioSource _audioSource;
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
 
@@ -29,10 +29,10 @@ public class Page : MonoBehaviour
     private float _animationSpeed = 1f;
     public bool ExitOnNewPagePush = false;
 
-    [SerializeField]
-    private AudioClip _entryClip;
-    [SerializeField]
-    private AudioClip _exitClip;
+    //[SerializeField]
+    //private AudioClip _entryClip;
+    //[SerializeField]
+    //private AudioClip _exitClip;
     [SerializeField]
     private EntryMode _entryMode = EntryMode.ZOOM;
     [SerializeField]
@@ -50,12 +50,12 @@ public class Page : MonoBehaviour
     {
         _rectTransform = this.GetComponent<RectTransform>();
         _canvasGroup = this.GetComponent<CanvasGroup>();
-        _audioSource = this.GetComponent<AudioSource>();
+        //_audioSource = this.GetComponent<AudioSource>();
 
-        _audioSource.playOnAwake = false;
-        _audioSource.loop = false;
-        _audioSource.spatialBlend = 0;
-        _audioSource.enabled = false;
+        //_audioSource.playOnAwake = false;
+        //_audioSource.loop = false;
+        //_audioSource.spatialBlend = 0;
+        //_audioSource.enabled = false;
     }
 
     /// <summary>
@@ -194,41 +194,41 @@ public class Page : MonoBehaviour
 
     private void PlayEntryClip(bool playAudio)
     {
-        if (_entryClip != null && _audioSource != null)
-        {
-            if (_audioCoroutine != null)
-            {
-                StopCoroutine(_audioCoroutine);
-            }
+        //if (_entryClip != null && _audioSource != null)
+        //{
+        //    if (_audioCoroutine != null)
+        //    {
+        //       StopCoroutine(_audioCoroutine);
+        //    }
 
-            _audioCoroutine = StartCoroutine(PlayClip(_entryClip));
-        }
+        //    _audioCoroutine = StartCoroutine(PlayClip(_entryClip));
+        //
     }
 
     private void PlayExitClip(bool playAudio)
     {
-        if (_exitClip != null && _audioSource != null)
-        {
-            if (_audioCoroutine != null)
-            {
-                StopCoroutine(_audioCoroutine);
-            }
+        //if (_exitClip != null && _audioSource != null)
+        //{
+        //    if (_audioCoroutine != null)
+        //    {
+        //        StopCoroutine(_audioCoroutine);
+        //    }
 
-            _audioCoroutine = StartCoroutine(PlayClip(_exitClip));
-        }
+        //    _audioCoroutine = StartCoroutine(PlayClip(_exitClip));
+        //}
     }
 
     private IEnumerator PlayClip(AudioClip clip)
     {
-        _audioSource.enabled = true;
+        //_audioSource.enabled = true;
 
         WaitForSeconds wait = new WaitForSeconds(clip.length);
 
-        _audioSource.PlayOneShot(clip);
+        //_audioSource.PlayOneShot(clip);
 
         yield return wait;
 
-        _audioSource.enabled = false;
+        //_audioSource.enabled = false;
     }
 
 

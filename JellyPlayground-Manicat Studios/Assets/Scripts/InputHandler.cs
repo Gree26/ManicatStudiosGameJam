@@ -30,7 +30,7 @@ public class InputHandler : MonoBehaviour
 
     public Action Interact;
 
-
+    public Action Escape;
 
     private void Awake()
     {
@@ -90,6 +90,11 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))
         {
             Slide?.Invoke(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Escape?.Invoke();
         }
     }
 
