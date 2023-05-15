@@ -71,7 +71,7 @@ public class PlayerMoveController : MonoBehaviour
 
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.forward * Mathf.Abs( positionModifier.y) * _moveSpeed * Time.deltaTime));
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.right * positionModifier.x * _maxMoveSpeed / 2 * Time.deltaTime));
-        Debug.Log(_moveSpeed);
+        
         if (DetectCollision())
         {
             _myRigidBody.velocity = new Vector3(-this.transform.forward.x * 10, 3, -this.transform.forward.y * 10) * (_moveSpeed/ _capSpeed);
