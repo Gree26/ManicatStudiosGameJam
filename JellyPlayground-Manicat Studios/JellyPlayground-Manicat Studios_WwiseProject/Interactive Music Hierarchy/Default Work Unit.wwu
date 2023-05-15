@@ -722,7 +722,7 @@
 										</MusicPlaylistItem>
 										<MusicPlaylistItem Name="" ID="{9A7ACD37-A9ED-4B83-A8FB-25B4674D1F57}" ShortID="312038117">
 											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="4"/>
+												<Property Name="LoopCount" Type="int16" Value="2"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="JellyRacer_Print_125bpm_Sec2_02" ID="{E6103DFD-57A8-49E2-B7E0-25C2B3AFB4F5}"/>
