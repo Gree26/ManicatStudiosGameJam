@@ -141,11 +141,13 @@ public class PlayerMoveController : MonoBehaviour
         GameDataManager.isSpeed = true;
         _moveSpeed = _capSpeed;
         jumpEvent.Post(this.gameObject);
+
     }
 
     private bool DetectCollision()
     {
         int layerMask = LayerMask.GetMask("Obstacle");
+
 
         if (Physics.Raycast(transform.position, transform.forward*1.1f, .55f, layerMask, QueryTriggerInteraction.Ignore))
         {
@@ -179,6 +181,18 @@ public class PlayerMoveController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Boost();
+        //EDITED BY MIKOANGELO
+        //BOOSTS WHEN COLLIDES WITH "SPEED BOOST" TAG
+        if (other.CompareTag("SpeedBoost"))
+        {
+            Boost();
+        }
+
+        if (other.CompareTag("Berry"))
+        {
+            checkpointIndex++;
+        }
+
     }
+
 }
