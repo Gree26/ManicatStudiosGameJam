@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2988322990">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3017428748" Language="SFX" Hash="2550102822">
+			<ObjectPath>\SoundBanks\Default Work Unit\MusicBank</ObjectPath>
+			<ShortName>MusicBank</ShortName>
+			<Path>MusicBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3170845728" Name="Play_MusicMain" ObjectPath="\Events\Default Work Unit\Play_MusicMain" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="11827896" Language="SFX">
+							<ShortName>JellyRaces_Menu_Print_01 [2023-05-14 150629].wav</ShortName>
+							<Path>SFX\JellyRaces_Menu_Print_01 [2023-05-14 150629]_D79FB2B7.wem</Path>
+						</File>
+						<File Id="346340646" Language="SFX">
+							<ShortName>JellyRacer_Print_125bpm_Sec1_01.wav</ShortName>
+							<Path>SFX\JellyRacer_Print_125bpm_Sec1_01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="670126863" Language="SFX">
+							<ShortName>JellyRacer_Print_125bpm_Sec2_01.wav</ShortName>
+							<Path>SFX\JellyRacer_Print_125bpm_Sec2_01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="670127712" Language="SFX">
+							<ShortName>JellyRacer_Print_125bpm_Loading_01.wav</ShortName>
+							<Path>SFX\JellyRacer_Print_125bpm_Loading_01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="678268001" Language="SFX">
+							<ShortName>JellyRacer_Print_125bpm_Sec3End_01.wav</ShortName>
+							<Path>SFX\JellyRacer_Print_125bpm_Sec3End_01_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{AB8C8228-20B3-483E-A0E5-AC7D8162527E}">
+							<Media>
+								<File Id="670127712"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{4840527A-21F2-4B64-BFE4-9285123670CC}">
+							<Media>
+								<File Id="678268001"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2A19FF29-DCB0-45E7-927F-1E6D65AA3469}">
+							<Media>
+								<File Id="346340646"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7D5E6E24-704D-4956-9FC2-3451345CA25A}">
+							<Media>
+								<File Id="670126863"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{A282911F-A260-4B35-ABA4-660913B6A150}">
+							<Media>
+								<File Id="11827896"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{4B2A1330-2EA9-4294-A10D-00227B45D0C2}">
+							<Media>
+								<File Id="11827896"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1408954334" Name="Stop_MusicMain" ObjectPath="\Events\Default Work Unit\Stop_MusicMain" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="1690668539" Name="Music_States" ObjectPath="\States\Default Work Unit\Music_States" GUID="{BCF4E616-1045-48BA-83D5-EE3091C779BE}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music_States\None" GUID="{96BE1702-B210-43E5-BE6E-B009EF70F347}"/>
+						<State Id="3573931707" Name="Loading" ObjectPath="\States\Default Work Unit\Music_States\Loading" GUID="{AB8C8228-20B3-483E-A0E5-AC7D8162527E}"/>
+						<State Id="585140289" Name="Sec1" ObjectPath="\States\Default Work Unit\Music_States\Sec1" GUID="{2A19FF29-DCB0-45E7-927F-1E6D65AA3469}"/>
+						<State Id="585140290" Name="Sec2" ObjectPath="\States\Default Work Unit\Music_States\Sec2" GUID="{7D5E6E24-704D-4956-9FC2-3451345CA25A}"/>
+						<State Id="529726532" Name="End" ObjectPath="\States\Default Work Unit\Music_States\End" GUID="{4840527A-21F2-4B64-BFE4-9285123670CC}"/>
+						<State Id="2478971905" Name="PauseMenuMusic" ObjectPath="\States\Default Work Unit\Music_States\PauseMenuMusic" GUID="{A282911F-A260-4B35-ABA4-660913B6A150}"/>
+						<State Id="508769081" Name="TitleMenuMusic" ObjectPath="\States\Default Work Unit\Music_States\TitleMenuMusic" GUID="{4B2A1330-2EA9-4294-A10D-00227B45D0C2}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

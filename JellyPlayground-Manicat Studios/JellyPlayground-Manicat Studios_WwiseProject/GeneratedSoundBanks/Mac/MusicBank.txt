@@ -1,0 +1,23 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1408954334	Stop_MusicMain			\Default Work Unit\Stop_MusicMain	
+	3170845728	Play_MusicMain			\Default Work Unit\Play_MusicMain	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1690668539	Music_States			\Default Work Unit\Music_States	
+
+State	ID	Name	State Group			Notes
+	508769081	TitleMenuMusic	Music_States			
+	529726532	End	Music_States			
+	585140289	Sec1	Music_States			
+	585140290	Sec2	Music_States			
+	748895195	None	Music_States			
+	2478971905	PauseMenuMusic	Music_States			
+	3573931707	Loading	Music_States			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	11827896	JellyRaces_Menu_Print_01 [2023-05-14 150629]	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\SFX\JellyRaces_Menu_Print_01 [2023-05-14 150629]_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\PauseMenu\JellyRaces_Menu_Print_01 [2023-05-14 150629]\JellyRaces_Menu_Print_01 [2023-05-14 150629]		21195000
+	346340646	JellyRacer_Print_125bpm_Sec1_01	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\SFX\JellyRacer_Print_125bpm_Sec1_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\Sec1\JellyRacer_Print_125bpm_Sec1_01\JellyRacer_Print_125bpm_Sec1_01		5419072
+	670126863	JellyRacer_Print_125bpm_Sec2_01	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\SFX\JellyRacer_Print_125bpm_Sec2_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\Sec2\JellyRacer_Print_125bpm_Sec2_01\JellyRacer_Print_125bpm_Sec2_01		10838080
+	670127712	JellyRacer_Print_125bpm_Loading_01	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\SFX\JellyRacer_Print_125bpm_Loading_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\Loading\JellyRacer_Print_125bpm_Loading_01\JellyRacer_Print_125bpm_Loading_01		4064320
+	678268001	JellyRacer_Print_125bpm_Sec3End_01	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\SFX\JellyRacer_Print_125bpm_Sec3End_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\End\JellyRacer_Print_125bpm_Sec3End_01\JellyRacer_Print_125bpm_Sec3End_01		4025176
+
