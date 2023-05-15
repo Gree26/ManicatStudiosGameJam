@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3689126666	Play_Jump			\Default Work Unit\Play_Jump	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	635465996	SFX_Jump-001	D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Jump-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Jump-001		176464
+
