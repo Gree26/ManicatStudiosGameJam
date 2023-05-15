@@ -30,6 +30,8 @@ public class PlayerMoveController : MonoBehaviour
 
     private Vector3 _scale = Vector3.one;
 
+    [SerializeField] List<GameObject> berries;
+
     //Sound
     [SerializeField] AK.Wwise.Event jumpEvent;
     [SerializeField] AK.Wwise.Event crouchEvent;
@@ -191,6 +193,14 @@ public class PlayerMoveController : MonoBehaviour
         if (other.CompareTag("Berry"))
         {
             checkpointIndex++;
+            foreach (var berry in berries)
+            {
+                if (other.gameObject == berry)
+                {
+                    Destroy(berry);
+                    break; // exit the loop once the object is destroyed
+                }
+            }
         }
 
     }
