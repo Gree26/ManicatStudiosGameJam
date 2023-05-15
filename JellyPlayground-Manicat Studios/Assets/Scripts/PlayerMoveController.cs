@@ -20,13 +20,15 @@ public class PlayerMoveController : MonoBehaviour
     private float _moveSpeedDrag = -.01f;
 
     [SerializeField] [Min(0)]
-    private float _moveSpeedAcceleration = .02f;
-    private float _moveSpeedDeceleration = -.1f;
+    private float _moveSpeedAcceleration = .05f;
+    private float _moveSpeedDeceleration = -.075f;
 
 
     Vector2 positionModifier = Vector2.zero;
 
     private bool _stunned = false;
+
+    private Vector3 _scale = Vector3.one;
 
     private bool isStunned
     {
@@ -42,6 +44,8 @@ public class PlayerMoveController : MonoBehaviour
         _myRigidBody = this.GetComponent<Rigidbody>();
         InputHandler.instance.MoveInput += NewMoveInput;
         InputHandler.instance.Jump += Jump;
+        InputHandler.instance.Slide += Slide;
+        _scale = this.transform.localScale;
         checkpointIndex = 0;
     }
 
@@ -52,10 +56,10 @@ public class PlayerMoveController : MonoBehaviour
             return;
         }
 
-        ModifyMoveSpeed(_moveSpeedDrag);
+        ModifyMoveSpeed(_moveSpeedDrag, 0, _capSpeed);
 
-        _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.forward * positionModifier.y * _moveSpeed * Time.deltaTime));
-        _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.right * positionModifier.x * _moveSpeed * Time.deltaTime));
+        _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.forward * Mathf.Abs( positionModifier.y) * _moveSpeed * Time.deltaTime));
+        _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.right * positionModifier.x * _maxMoveSpeed / 2 * Time.deltaTime));
 
         if (DetectCollision())
         {
@@ -76,13 +80,19 @@ public class PlayerMoveController : MonoBehaviour
 
     private void NewMoveInput(Vector2 moveValue)
     {
-        ModifyMoveSpeed(_moveSpeedAcceleration);
+        ModifyMoveSpeed(_moveSpeedAcceleration * moveValue.y, -_maxMoveSpeed, _maxMoveSpeed);
 
         transform.rotation = Quaternion.Euler( InputHandler.instance.MoveDirection);
         positionModifier = moveValue;
     }
 
-    private void ModifyMoveSpeed(float newValue)
+    /// <summary>
+    /// Adjust Speed by the given parameters.
+    /// </summary>
+    /// <param name="newValue"></param>
+    /// <param name="minValue"></param>
+    /// <param name="maxValue"></param>
+    private void ModifyMoveSpeed(float newValue, float minValue, float maxValue)
     {
         bool isGreater = _moveSpeed > _maxMoveSpeed;
 
@@ -92,7 +102,19 @@ public class PlayerMoveController : MonoBehaviour
 
         GameDataManager.isSpeed = (isGreater)? true:false;
 
-        _moveSpeed = (isGreater)? Mathf.Clamp(_moveSpeed + newValue, 0, _capSpeed) : Mathf.Clamp(_moveSpeed + newValue, 0, _maxMoveSpeed);
+        _moveSpeed = (isGreater)? Mathf.Clamp(_moveSpeed + newValue, minValue, _capSpeed) : Mathf.Clamp(_moveSpeed + newValue, minValue, maxValue);
+    }
+
+    private void Slide(bool isSlidiing)
+    {
+        this.transform.localScale = (isSlidiing) ? new Vector3(_scale.x, _scale.y / 2, _scale.z) : _scale;
+
+        if (!DetectStanding())
+            return;
+        if(_moveSpeed<0)
+            ModifyMoveSpeed(-_moveSpeedDeceleration, -_maxMoveSpeed, 0);
+        else
+            ModifyMoveSpeed(_moveSpeedDeceleration, 0, _maxMoveSpeed);
     }
 
     private void Boost()
@@ -103,7 +125,7 @@ public class PlayerMoveController : MonoBehaviour
 
     private bool DetectCollision()
     {
-        int layerMask = ~LayerMask.GetMask("Berries");
+        int layerMask = LayerMask.GetMask("Obstacle");
 
         if (Physics.Raycast(transform.position, transform.forward*1.1f, .55f, layerMask, QueryTriggerInteraction.Ignore))
         {
@@ -114,7 +136,7 @@ public class PlayerMoveController : MonoBehaviour
 
     private bool DetectStanding()
     {
-        int layerMask = ~LayerMask.GetMask("Berries");
+        int layerMask = Physics.AllLayers;
 
         if (Physics.Raycast(transform.position, Vector3.down * 1.1f, .55f, layerMask, QueryTriggerInteraction.Ignore))
         {
