@@ -6,13 +6,18 @@
 				<MusicSwitchContainer Name="MusicMain" ID="{4515B7E5-7070-4DB0-B78A-129AC1DC6A7E}" ShortID="376185539">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="125"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+							<ObjectRef Name="MusicBus" ID="{04FF9FDE-685F-4268-8EE6-ECAA3A920983}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -455,7 +460,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>-0</XPos>
+																										<XPos>0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -474,7 +479,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>-0</XPos>
+																										<XPos>0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -493,7 +498,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>-0</XPos>
+																										<XPos>0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>

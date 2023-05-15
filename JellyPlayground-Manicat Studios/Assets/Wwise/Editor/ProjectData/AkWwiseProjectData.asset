@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 82fc0bd2067f0448b8bfcd93e2c2ccaf
     GuidInternal: 
-    m_lastTime: -8585175095472255222
+    m_lastTime: -8585174885835423699
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 09d029b394af344a8f56b201e1870900
     GuidInternal: 
-    m_lastTime: -8585175095472735306
+    m_lastTime: -8585174836240177305
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,57 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: MusicBus
+      guid: de9fff045f6868428ee6ecaa3a920983
+      id: 2886307548
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 09d029b394af344a8f56b201e1870900
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MusicBus
+        ObjectType: 2
+        guid: de9fff045f6868428ee6ecaa3a920983
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MusicBus
+    - name: SFX
+      guid: 71a0fe44db997046b5c05a6c9d8a7266
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 09d029b394af344a8f56b201e1870900
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 71a0fe44db997046b5c05a6c9d8a7266
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
+    - name: UI
+      guid: 3425a7d39625ed4983ea528ab934fe7f
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 09d029b394af344a8f56b201e1870900
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: UI
+        ObjectType: 2
+        guid: 3425a7d39625ed4983ea528ab934fe7f
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +117,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e4ae0fd081baf545b5ce7368c64d886d
     GuidInternal: 
-    m_lastTime: -8585174946670675284
+    m_lastTime: -8585174885835443703
     List:
     - name: MusicBank
       guid: 78d6980c985d64478448b1b5eece7927
@@ -94,7 +145,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 292a168822454f4d9945239e50d1037c
     GuidInternal: 
-    m_lastTime: -8585174946949363843
+    m_lastTime: -8585174885846835691
     List:
     - name: Play_MusicMain
       guid: 9e3826c3c2b2b24cbb7e48ba8d5ea82b
@@ -142,7 +193,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f9e9c4d822b8de4eafc631e3387356d0
     GuidInternal: 
-    m_lastTime: -8585175095473125370
+    m_lastTime: -8585174885846830695
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -156,7 +207,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 956ec1a4b1fc3045b78f32a2a3a415a1
     GuidInternal: 
-    m_lastTime: -8585174946949473863
+    m_lastTime: -8585174836242042633
     List:
     - name: Music_States
       guid: 16e6f4bc4510ba4883d5ee3091c779be
@@ -205,22 +256,6 @@ MonoBehaviour:
         - ElementName: Loading
           ObjectType: 8
           guid: 28828cabb3203e48a0e5ac7d8162527e
-      - name: None
-        guid: 0217be9610b2e543be6eb009ef70f347
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 956ec1a4b1fc3045b78f32a2a3a415a1
-        - ElementName: Music_States
-          ObjectType: 9
-          guid: 16e6f4bc4510ba4883d5ee3091c779be
-        - ElementName: None
-          ObjectType: 8
-          guid: 0217be9610b2e543be6eb009ef70f347
       - name: PauseMenuMusic
         guid: 1f9182a260a2354baba4660913b6a150
         id: 2478971905
@@ -300,7 +335,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 058a2492f620334ba16ff78b7c7c630d
     GuidInternal: 
-    m_lastTime: -8585175095472535271
+    m_lastTime: -8585174885835433701
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -314,10 +349,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: e078044b6d44334e892c8288a024a76f
     GuidInternal: 
-    m_lastTime: -8585175095472355239
+    m_lastTime: -8585174885835428701
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000a0000000b0000000c0000000d0000000e000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
