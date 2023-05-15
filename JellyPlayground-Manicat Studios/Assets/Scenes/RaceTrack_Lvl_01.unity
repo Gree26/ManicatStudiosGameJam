@@ -1270,6 +1270,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1576488453971394810, guid: a778b631c6253a04899cb31bad047c81, type: 3}
   m_PrefabInstance: {fileID: 137925184}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &139446838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: ecdb2f2eebdcbd244ab009aad06660b7, type: 3}
+  m_PrefabInstance: {fileID: 2075317660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &139446842
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139446838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: ecdb2f2eebdcbd244ab009aad06660b7, type: 3}
 --- !u!1001 &149646297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8433,6 +8452,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 09892e65cf27b2b4db57e58de940aa9d, type: 3}
   m_PrefabInstance: {fileID: 1616152694}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &724177488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ecdb2f2eebdcbd244ab009aad06660b7, type: 3}
+  m_PrefabInstance: {fileID: 2075317660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &724177490
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724177488}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!4 &724812994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 09892e65cf27b2b4db57e58de940aa9d, type: 3}
@@ -24759,6 +24797,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f8fe5fd2804bff941b53536c6b18fd2f, type: 2}
+    - target: {fileID: 8164078558771037576, guid: ecdb2f2eebdcbd244ab009aad06660b7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9184444608406305695, guid: ecdb2f2eebdcbd244ab009aad06660b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.57
