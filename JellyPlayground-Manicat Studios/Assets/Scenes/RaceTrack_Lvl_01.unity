@@ -447,6 +447,22 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 0d050e9c402735c41b2291f68bf0cc84, type: 2}
+  crouchEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 06195696b1d444f4a82c73e335b52801, type: 2}
+  collisionEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4b94f5cfdd72716469a76cde01afdb88, type: 2}
+  accelerationEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f0b02fdb24e986b43a0b51904ce5e59f, type: 2}
+  RTPC_Acceleration:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: aa4a2d1f8ebdd764cb8933acc4678cef, type: 2}
 --- !u!54 &152121962
 Rigidbody:
   m_ObjectHideFlags: 0

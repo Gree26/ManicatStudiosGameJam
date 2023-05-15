@@ -13,6 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ACCELERATION = 794457826U;
+        static const AkUniqueID PLAY_CLICK = 311910498U;
+        static const AkUniqueID PLAY_COLLISION = 1553219250U;
+        static const AkUniqueID PLAY_CROUCH = 3989731860U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_MUSICMAIN = 3170845728U;
         static const AkUniqueID STOP_MUSICMAIN = 1408954334U;
@@ -37,6 +41,11 @@ namespace AK
         } // namespace MUSIC_STATES
 
     } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID ACCELERATION_PARAMETER = 53139121U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

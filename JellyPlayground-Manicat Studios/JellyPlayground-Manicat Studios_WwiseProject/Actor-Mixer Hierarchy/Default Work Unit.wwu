@@ -42,6 +42,17 @@
 						</Sound>
 						<Sound Name="SFX_Jump-001" ID="{1C336803-48DB-4750-815A-B78CAFEDC0DA}" ShortID="698356871">
 							<PropertyList>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-11</Value>
@@ -58,6 +69,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Jump-001" ID="{FFDC71C7-D0E9-4D32-A1D6-95D08155D676}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.26878612716763"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.488439306358381"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Jump-001.wav</AudioFile>
 									<MediaIDList>
@@ -70,30 +86,20 @@
 								<ActiveSource Name="SFX_Jump-001" ID="{FFDC71C7-D0E9-4D32-A1D6-95D08155D676}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" ShortID="551987699">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_Acceleration-001" ID="{38E3F13D-7C51-4766-9851-FCD09D921265}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_Acceleration-001.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1032208743"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_Acceleration-001" ID="{38E3F13D-7C51-4766-9851-FCD09D921265}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_Squeeze-001" ID="{68E4C5EE-A6C9-47CC-8DB0-7AE79BC631DA}" ShortID="53685276">
+						<Sound Name="SFX_Crouch-001" ID="{68E4C5EE-A6C9-47CC-8DB0-7AE79BC631DA}" ShortID="53685276">
+							<PropertyList>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
@@ -104,6 +110,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Squeeze-001" ID="{7D5EA8B7-29EA-4C15-90BA-A2E904A828C2}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.13728323699422"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.296242774566474"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Squeeze-001.wav</AudioFile>
 									<MediaIDList>
@@ -163,6 +174,20 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="SFX_Collision-001" ID="{F0CA5A46-CDF9-4D65-9566-F9791A5ABABE}" ShortID="1055408426">
+							<PropertyList>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
@@ -173,6 +198,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Collision-001" ID="{50658DFF-20F4-4F32-B839-0B0A58D3B81B}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.395953757225433"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.572254335260116"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Collision-001.wav</AudioFile>
 									<MediaIDList>
@@ -183,6 +213,60 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="SFX_Collision-001" ID="{50658DFF-20F4-4F32-B839-0B0A58D3B81B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" ShortID="551987699">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{57C9E077-CDFF-4AA5-8B64-81FBD3D24E93}" ShortID="59063691">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Acceleration_Parameter" ID="{0B96CA26-DADC-4A2F-A080-182248CCD4ED}" WorkUnitID="{D8C4E9F9-B822-4EDE-AFC6-31E3387356D0}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{13A7CC69-0E0E-4765-A228-4B04F39DDF81}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-287</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>621</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{44FEA071-99DB-4670-B5C0-5A6C9D8A7266}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Acceleration-001" ID="{38E3F13D-7C51-4766-9851-FCD09D921265}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Acceleration-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1032208743"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Acceleration-001" ID="{38E3F13D-7C51-4766-9851-FCD09D921265}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

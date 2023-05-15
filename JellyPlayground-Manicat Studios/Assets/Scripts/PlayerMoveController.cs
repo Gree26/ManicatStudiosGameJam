@@ -32,6 +32,11 @@ public class PlayerMoveController : MonoBehaviour
 
     //Sound
     [SerializeField] AK.Wwise.Event jumpEvent;
+    [SerializeField] AK.Wwise.Event crouchEvent;
+    [SerializeField] AK.Wwise.Event collisionEvent;
+    [SerializeField] AK.Wwise.Event accelerationEvent;
+
+    [SerializeField] AK.Wwise.RTPC RTPC_Acceleration;
 
     private bool isStunned
     {
@@ -113,7 +118,7 @@ public class PlayerMoveController : MonoBehaviour
     private void Slide(bool isSlidiing)
     {
         this.transform.localScale = (isSlidiing) ? new Vector3(_scale.x, _scale.y / 2, _scale.z) : _scale;
-
+        crouchEvent.Post(this.gameObject);
         if (!DetectStanding())
             return;
         if(_moveSpeed<0)
@@ -126,6 +131,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         GameDataManager.isSpeed = true;
         _moveSpeed = _capSpeed;
+        jumpEvent.Post(this.gameObject);
     }
 
     private bool DetectCollision()
@@ -134,6 +140,7 @@ public class PlayerMoveController : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward*1.1f, .55f, layerMask, QueryTriggerInteraction.Ignore))
         {
+            collisionEvent.Post(this.gameObject);
             return true;
         }
         return false;
