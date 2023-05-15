@@ -40,7 +40,7 @@
 								<ActiveSource Name="SFX_Break-001" ID="{7FA6DEDE-7E1D-4089-A3FD-39DCAEA2B4C3}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="SFX_Jump-001" ID="{1C336803-48DB-4750-815A-B78CAFEDC0DA}" ShortID="698356871">
+						<Sound Name="SFX_Slide-001" ID="{1C336803-48DB-4750-815A-B78CAFEDC0DA}" ShortID="698356871">
 							<PropertyList>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -55,7 +55,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-11</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -88,12 +88,25 @@
 						</Sound>
 						<Sound Name="SFX_Crouch-001" ID="{68E4C5EE-A6C9-47CC-8DB0-7AE79BC631DA}" ShortID="53685276">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>19</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>1</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="25"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
@@ -143,6 +156,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_BerryCollected-001" ID="{510CABDE-61BC-4C31-9507-0CD2B3F689A5}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.492774566473988"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.861271676300578"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_BerryCollected-001.wav</AudioFile>
 									<MediaIDList>
@@ -155,7 +173,33 @@
 								<ActiveSource Name="SFX_BerryCollected-001" ID="{510CABDE-61BC-4C31-9507-0CD2B3F689A5}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="SFX_Slide-001" ID="{029576E7-BB31-45FB-ACC6-3D487D26490B}" ShortID="148164465">
+						<Sound Name="SFX_Jump-001" ID="{029576E7-BB31-45FB-ACC6-3D487D26490B}" ShortID="148164465">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>38</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="38"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
@@ -166,6 +210,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_Slide-001" ID="{6B8498B5-3754-495A-9C0A-D5317F457D49}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0158959537572254"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.177745664739884"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0592485549132948"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.576589595375722"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_Slide-001.wav</AudioFile>
 									<MediaIDList>
@@ -228,6 +279,7 @@
 						<Sound Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" ShortID="551987699">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>39</Value>
@@ -380,6 +432,19 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="UI_Click-001" ID="{F7362416-B513-4658-81F6-E66372FC1A8C}" ShortID="319120819">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C5EB2A57-0B6D-4E0B-9D10-37CB7A2D1427}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
@@ -390,6 +455,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_UI_Click-001" ID="{5966DF41-EA8D-4E94-8807-AC6F1ED9E888}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.106936416184971"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.320809248554913"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_UI_Click-001.wav</AudioFile>
 									<MediaIDList>
@@ -413,6 +483,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_CountdownTimer-003" ID="{D338126E-A1BD-45A1-AC72-8AB76C8680BD}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.219653179190751"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.579479768786127"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_CountdownTimer-003.wav</AudioFile>
 									<MediaIDList>
@@ -436,6 +511,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_CountdownTimer-004" ID="{508C1228-E84D-451C-8520-3F887C95C5CF}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.213872832369942"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.619942196531792"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_CountdownTimer-004.wav</AudioFile>
 									<MediaIDList>
@@ -459,6 +539,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_CountdownTimer-001" ID="{DFBC6258-547E-4346-A74B-98A43658668B}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.221098265895954"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.573699421965318"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_CountdownTimer-001.wav</AudioFile>
 									<MediaIDList>
@@ -482,6 +567,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="SFX_CountdownTimer-002" ID="{D54C5683-8136-4194-802D-418551AEF7F8}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.153179190751445"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.546242774566474"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>SFX_CountdownTimer-002.wav</AudioFile>
 									<MediaIDList>

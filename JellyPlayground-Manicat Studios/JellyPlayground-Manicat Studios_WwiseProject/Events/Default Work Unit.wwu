@@ -45,7 +45,7 @@
 						<Action Name="" ID="{FAD8AB9E-F67E-42E2-95EE-19966BFCF732}" ShortID="129521793">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_Jump-001" ID="{1C336803-48DB-4750-815A-B78CAFEDC0DA}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+									<ObjectRef Name="SFX_Jump-001" ID="{029576E7-BB31-45FB-ACC6-3D487D26490B}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

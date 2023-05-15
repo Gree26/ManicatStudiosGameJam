@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3017428748" Language="SFX" Hash="3761761919">
+		<SoundBank Id="3017428748" Language="SFX" Hash="2707852513">
 			<ObjectPath>\SoundBanks\Default Work Unit\MusicBank</ObjectPath>
 			<ShortName>MusicBank</ShortName>
 			<Path>MusicBank.bnk</Path>
@@ -93,12 +93,12 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017475316" Language="SFX" Hash="3453286131">
+		<SoundBank Id="3017475316" Language="SFX" Hash="681035254">
 			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
 			<ShortName>SfxBank</ShortName>
 			<Path>SfxBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="794457826" Name="Play_Acceleration" ObjectPath="\Events\Default Work Unit\Play_Acceleration" MaxAttenuation="100." DurationType="Infinite">
+				<Event Id="794457826" Name="Play_Acceleration" ObjectPath="\Events\Default Work Unit\Play_Acceleration" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="1032208743" Language="SFX">
 							<ShortName>SFX_Acceleration-001.wav</ShortName>
@@ -106,11 +106,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="311910498" Name="Play_Click" ObjectPath="\Events\Default Work Unit\Play_Click" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="311910498" Name="Play_Click" ObjectPath="\Events\Default Work Unit\Play_Click" DurationType="OneShot" DurationMin="0.320809" DurationMax="0.320809">
 					<IncludedMemoryFiles>
 						<File Id="121089721" Language="SFX">
 							<ShortName>SFX_UI_Click-001.wav</ShortName>
-							<Path>SFX\SFX_UI_Click-001_10C4C929.wem</Path>
+							<Path>SFX\SFX_UI_Click-001_CB2AD230.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -130,11 +130,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Play_Jump" DurationType="OneShot" DurationMin="0.488439" DurationMax="0.488439">
+				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Play_Jump" DurationType="OneShot" DurationMin="0.517341" DurationMax="0.517341">
 					<IncludedMemoryFiles>
-						<File Id="635465996" Language="SFX">
-							<ShortName>SFX_Jump-001.wav</ShortName>
-							<Path>SFX\SFX_Jump-001_11F78324.wem</Path>
+						<File Id="387000028" Language="SFX">
+							<ShortName>SFX_Slide-001.wav</ShortName>
+							<Path>SFX\SFX_Slide-001_AB4D48B0.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -159,7 +159,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 292a168822454f4d9945239e50d1037c
     GuidInternal: 
-    m_lastTime: -8585174702423808784
+    m_lastTime: -8585174678322838394
     List:
     - name: Play_Acceleration
       guid: a05e1d3e2f4ed5478f63a2f2cf528669
@@ -193,8 +193,8 @@ MonoBehaviour:
         guid: 3c91a330b86e0a4ab27e00ae3125bf40
       Path: Events\Default Work Unit\Play_Click
       maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
+      maxDuration: 0.320809
+      minDuration: 0.320809
     - name: Play_Collision
       guid: 422ee0b5af2bae4aa35e492dadf3ebac
       id: 1553219250
@@ -244,8 +244,8 @@ MonoBehaviour:
         guid: 53d2dd54e9959544b94893f8fe4c842f
       Path: Events\Default Work Unit\Play_Jump
       maxAttenuation: 0
-      maxDuration: 0.488439
-      minDuration: 0.488439
+      maxDuration: 0.517341
+      minDuration: 0.517341
     - name: Play_MusicMain
       guid: 9e3826c3c2b2b24cbb7e48ba8d5ea82b
       id: 3170845728
