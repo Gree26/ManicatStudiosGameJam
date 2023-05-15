@@ -333,6 +333,10 @@ MonoBehaviour:
   _capSpeed: 20
   checkpointIndex: 0
   _moveSpeedAcceleration: 0.02
+  jumpEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0d050e9c402735c41b2291f68bf0cc84, type: 2}
 --- !u!1 &308346480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,6 +1458,7 @@ GameObject:
   - component: {fileID: 1474865227}
   - component: {fileID: 1474865226}
   - component: {fileID: 1474865231}
+  - component: {fileID: 1474865232}
   - component: {fileID: 1474865230}
   - component: {fileID: 1474865229}
   - component: {fileID: 1474865228}
@@ -1597,6 +1602,30 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ea2b82b8fca4d944aaa64070f115c525, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!114 &1474865232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474865225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5a9f8a3854f7d4b952dd0aaa2456aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e9e07a0de48f98149997e460b4fad78e, type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
