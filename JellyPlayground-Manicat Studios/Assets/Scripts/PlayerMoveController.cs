@@ -179,6 +179,7 @@ public class PlayerMoveController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Boost();
+        if(LayerMask.LayerToName( other.gameObject.layer) == "SpeedBerry")
+            Boost();
     }
 }

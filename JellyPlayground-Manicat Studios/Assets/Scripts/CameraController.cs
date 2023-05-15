@@ -16,9 +16,23 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private float _horizontalSpeed = 1f;
 
+    public static Vector3 mainCameraPosition 
+    {
+        get
+        {
+            return _myCamera.transform.position;
+        }
+
+    }
+
+    private static GameObject _myCamera;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        _myCamera = this.gameObject;
         InputHandler.instance.MouseInput += NewMouseInput;
     }
 
@@ -35,6 +49,4 @@ public class CameraController : MonoBehaviour
 
         InputHandler.instance.MoveDirection = new Vector3(0, this.transform.eulerAngles.y, 0);
     }
-
-
 }

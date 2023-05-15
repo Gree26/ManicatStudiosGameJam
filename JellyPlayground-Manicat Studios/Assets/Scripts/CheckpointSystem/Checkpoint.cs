@@ -15,10 +15,12 @@ public class Checkpoint : MonoBehaviour
             if(player.checkpointIndex == index - 1)
             {
                 player.checkpointIndex = index;
+                GameDataManager.CheckpointReached(index);
                 Debug.Log("You just passed a checkpoint successfully");
             }
             else
             {
+                GameDataManager.WrongCheckpoint(index, player.checkpointIndex + 1);
                 Debug.Log("You missed a checkpoint, your last checkpoint is " + player.checkpointIndex);
             }
         }
