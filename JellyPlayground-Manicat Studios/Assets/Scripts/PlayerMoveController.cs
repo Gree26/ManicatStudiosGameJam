@@ -47,13 +47,23 @@ public class PlayerMoveController : MonoBehaviour
 
     private Vector3 _scale = Vector3.one;
 
-    //Sound
+    //Berries Collected
+    [SerializeField] int berriesCollected;
+    [SerializeField] List<GameObject> berries;
+
+    [SerializeField] public List<GameObject> berriesLap0;
+    [SerializeField] public List<GameObject> berriesLap1;
+    [SerializeField] public List<GameObject> berriesLap2;
+
+    //Sound------------------------------------------------
     [SerializeField] AK.Wwise.Event jumpEvent;
     [SerializeField] AK.Wwise.Event crouchEvent;
     [SerializeField] AK.Wwise.Event collisionEvent;
     [SerializeField] AK.Wwise.Event accelerationEvent;
-
     [SerializeField] AK.Wwise.RTPC RTPC_Acceleration;
+
+    [SerializeField] private float _brakeForce = 0.001f;
+    [SerializeField] private bool _isBraking = false;
 
     private bool isStunned
     {
@@ -71,10 +81,13 @@ public class PlayerMoveController : MonoBehaviour
         InputHandler.instance.MoveInput += NewMoveInput;
         InputHandler.instance.Jump += Jump;
         InputHandler.instance.Slide += Slide;
+        InputHandler.instance.BrakeInput += Brake;
+
         _scale = this.transform.localScale;
         checkpointIndex = 0;
 
         accelerationEvent.Post(this.gameObject);
+
         _currentTime = 0;
     }
 
@@ -89,7 +102,12 @@ public class PlayerMoveController : MonoBehaviour
 
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.forward * Mathf.Abs( positionModifier.y) * _moveSpeed * Time.deltaTime));
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.right * positionModifier.x * _maxMoveSpeed / 2 * Time.deltaTime));
-        
+
+        if (_isBraking)
+        {
+            ModifyMoveSpeed(-_brakeForce, 0, _maxMoveSpeed);
+        }
+
         if (DetectCollision())
         {
             _myRigidBody.velocity = new Vector3(-this.transform.forward.x * 10, 3, -this.transform.forward.y * 10) * (_moveSpeed/ _capSpeed);
@@ -159,11 +177,13 @@ public class PlayerMoveController : MonoBehaviour
         GameDataManager.isSpeed = true;
         _moveSpeed = _capSpeed;
         jumpEvent.Post(this.gameObject);
+
     }
 
     private bool DetectCollision()
     {
         int layerMask = LayerMask.GetMask("Obstacle");
+
 
         if (Physics.Raycast(transform.position, transform.forward*1.1f, .55f, layerMask, QueryTriggerInteraction.Ignore))
         {
@@ -195,10 +215,67 @@ public class PlayerMoveController : MonoBehaviour
         _stunned = false;
     }
 
+    private void Brake(bool isBraking)
+    {
+        _isBraking = isBraking;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(LayerMask.LayerToName( other.gameObject.layer) == "Berry")
             Boost();  
+
+            //EDITED BY MIKOANGELO
+        //BOOSTS WHEN COLLIDES WITH "SPEED BOOST" TAG
+        if (other.CompareTag("SpeedBoost"))
+        {
+            Boost();
+        }
+
+        if (other.CompareTag("Checkpoint"))
+        {
+            checkpointIndex++;
+            switch (checkpointIndex)
+            {
+                case 1:
+                    foreach (var berry in berriesLap0)
+                    {
+                        berry.SetActive(true);
+                    }
+                    break;
+                case 2:
+                    foreach (var berries in berriesLap1)
+                    {
+                        berries.SetActive(true);
+                    }
+                    break;
+                case 3:
+                    foreach (var berries in berriesLap2)
+                    {
+                        berries.SetActive(true);
+                    }
+                    break;
+                default:
+                    Debug.Log("You Won!");
+                    break;
+            }
+
+
+        }
+
+        if (other.CompareTag("Berry"))
+        {
+            
+            foreach (var berry in berries)
+            {
+                if (other.gameObject == berry)
+                {
+                    berriesCollected++;
+                    Destroy(berry);
+                    break; // exit the loop once the object is destroyed
+                }
+            }
+        }
     }
 
     private void OnTriggerStay(Collider other)
