@@ -25,7 +25,10 @@
 						<ObjectRef Name="Play_Crouch" ID="{DB04E758-3FB1-4657-AD63-94D752109224}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Acceleration" ID="{3E1D5EA0-4E2F-47D5-8F63-A2F2CF528669}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Click" ID="{30A3913C-6EB8-4A0A-B27E-00AE3125BF40}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BerryCollected" ID="{3A32EC3E-4E05-4A79-A166-32FC94C3BFDD}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Collision" ID="{B5E02E42-2BAF-4AAE-A35E-492DADF3EBAC}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Break" ID="{F346BB5D-E90C-4B93-B0BB-D01CBFA40D1E}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Slide" ID="{C83C6300-043C-4CF8-AE08-A54B3C364992}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

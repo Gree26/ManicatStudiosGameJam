@@ -2811,6 +2811,18 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: f0b02fdb24e986b43a0b51904ce5e59f, type: 2}
+  berryCollectedEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f79590e6da233924d9e1b3ff1a84b9ae, type: 2}
+  breakEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c12574b393d42184ba256fbcccb92eab, type: 2}
+  slideEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 05158312f7e83aa4e92b28ecf22d8373, type: 2}
   RTPC_Acceleration:
     idInternal: 0
     valueGuidInternal: 
@@ -48490,12 +48502,10 @@ Transform:
   - {fileID: 278911521}
   - {fileID: 1985255949}
   - {fileID: 292290576}
-  - {fileID: 2098035890}
   - {fileID: 1224067846}
   - {fileID: 1126473594}
   - {fileID: 993720034}
   - {fileID: 135768906}
-  - {fileID: 2096031375}
   - {fileID: 1365586040}
   - {fileID: 2064188137}
   - {fileID: 2142332822}
@@ -56702,14 +56712,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2096031375}
-  - component: {fileID: 2096031376}
-  m_Layer: 10
-  m_Name: Collider (17)
   - component: {fileID: 2095220171}
   - component: {fileID: 2095220172}
-  m_Layer: 0
-  m_Name: SpotLight
+  m_Layer: 10
+  m_Name: Collider (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
