@@ -70,10 +70,7 @@ public class PlayerMoveController : MonoBehaviour
 
         accelerationEvent.Post(this.gameObject);
 
-        foreach (var berry in berriesLap0)
-        {
-            berry.SetActive(true);
-        }
+        
     }
 
     private void Update()
@@ -220,12 +217,18 @@ public class PlayerMoveController : MonoBehaviour
             switch (checkpointIndex)
             {
                 case 1:
+                    foreach (var berry in berriesLap0)
+                    {
+                        berry.SetActive(true);
+                    }
+                    break;
+                case 2:
                     foreach (var berries in berriesLap1)
                     {
                         berries.SetActive(true);
                     }
                     break;
-                case 2:
+                case 3:
                     foreach (var berries in berriesLap2)
                     {
                         berries.SetActive(true);
