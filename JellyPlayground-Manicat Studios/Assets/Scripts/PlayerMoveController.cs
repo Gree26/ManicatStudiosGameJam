@@ -5,10 +5,26 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMoveController : MonoBehaviour
 {
+    private static float _currentTime = 0;
+    public static float CurrentTime
+    {
+        get
+        {
+            return _currentTime;
+        }
+    }
+
     private Rigidbody _myRigidBody;
 
-    [SerializeField] [Min(0)]
     private float _maxMoveSpeed = 10;
+
+    [SerializeField]
+    [Min(0)]
+    private float _maxWalkSpeed = 10;
+
+    [SerializeField]
+    [Min(0)]
+    private float _slowMoveSpeed = 5;
 
     [SerializeField]
     [Min(0)]
@@ -17,6 +33,7 @@ public class PlayerMoveController : MonoBehaviour
     private float _moveSpeed = 1;
     public int checkpointIndex;
 
+    [SerializeField]
     private float _moveSpeedDrag = -.01f;
 
     [SerializeField] [Min(0)]
@@ -59,6 +76,7 @@ public class PlayerMoveController : MonoBehaviour
 
     private void Start()
     {
+        _maxMoveSpeed = _maxWalkSpeed;
         _myRigidBody = this.GetComponent<Rigidbody>();
         InputHandler.instance.MoveInput += NewMoveInput;
         InputHandler.instance.Jump += Jump;
@@ -70,7 +88,7 @@ public class PlayerMoveController : MonoBehaviour
 
         accelerationEvent.Post(this.gameObject);
 
-        
+        _currentTime = 0;
     }
 
     private void Update()
@@ -98,7 +116,7 @@ public class PlayerMoveController : MonoBehaviour
             isStunned = true;
         }
         RTPC_Acceleration.SetValue(this.gameObject,_moveSpeed);
-        
+        _currentTime += Time.deltaTime;
     }
 
     private void Jump()
@@ -127,7 +145,7 @@ public class PlayerMoveController : MonoBehaviour
     /// <param name="maxValue"></param>
     private void ModifyMoveSpeed(float newValue, float minValue, float maxValue)
     {
-        bool isGreater = _moveSpeed > _maxMoveSpeed;
+        bool isGreater = _moveSpeed > _maxWalkSpeed;
 
         if (isGreater && newValue >= 0)
             return;
@@ -179,7 +197,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         int layerMask = Physics.AllLayers;
 
-        if (Physics.Raycast(transform.position, Vector3.down * 1.1f, .55f, layerMask, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(transform.position, Vector3.down * 1.3f, .55f, layerMask, QueryTriggerInteraction.Ignore))
         {
             return true;
         }
@@ -204,7 +222,10 @@ public class PlayerMoveController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //EDITED BY MIKOANGELO
+        if(LayerMask.LayerToName( other.gameObject.layer) == "Berry")
+            Boost();  
+
+            //EDITED BY MIKOANGELO
         //BOOSTS WHEN COLLIDES WITH "SPEED BOOST" TAG
         if (other.CompareTag("SpeedBoost"))
         {
@@ -255,7 +276,23 @@ public class PlayerMoveController : MonoBehaviour
                 }
             }
         }
-
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (LayerMask.LayerToName(other.gameObject.layer) == "Slow")
+        {
+            _maxMoveSpeed = _slowMoveSpeed;
+            Debug.Log("Start Slow");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (LayerMask.LayerToName(other.gameObject.layer) == "Slow")
+        {
+            _maxMoveSpeed = _maxWalkSpeed;
+            Debug.Log("Stop Slow");
+        }
+    }
 }
