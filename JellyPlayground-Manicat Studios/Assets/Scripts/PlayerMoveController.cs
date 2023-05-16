@@ -30,14 +30,19 @@ public class PlayerMoveController : MonoBehaviour
 
     private Vector3 _scale = Vector3.one;
 
+    //Berries Collected
+    [SerializeField] int berriesCollected;
     [SerializeField] List<GameObject> berries;
 
-    //Sound
+    [SerializeField] public List<GameObject> berriesLap0;
+    [SerializeField] public List<GameObject> berriesLap1;
+    [SerializeField] public List<GameObject> berriesLap2;
+
+    //Sound------------------------------------------------
     [SerializeField] AK.Wwise.Event jumpEvent;
     [SerializeField] AK.Wwise.Event crouchEvent;
     [SerializeField] AK.Wwise.Event collisionEvent;
     [SerializeField] AK.Wwise.Event accelerationEvent;
-
     [SerializeField] AK.Wwise.RTPC RTPC_Acceleration;
 
     private bool isStunned
@@ -59,7 +64,11 @@ public class PlayerMoveController : MonoBehaviour
         checkpointIndex = 0;
 
         accelerationEvent.Post(this.gameObject);
-        
+
+        foreach (var berry in berriesLap0)
+        {
+            berry.SetActive(true);
+        }
     }
 
     private void Update()
@@ -190,13 +199,39 @@ public class PlayerMoveController : MonoBehaviour
             Boost();
         }
 
-        if (other.CompareTag("Berry"))
+        if (other.CompareTag("Checkpoint"))
         {
             checkpointIndex++;
+            switch (checkpointIndex)
+            {
+                case 1:
+                    foreach (var berries in berriesLap1)
+                    {
+                        berries.SetActive(true);
+                    }
+                    break;
+                case 2:
+                    foreach (var berries in berriesLap2)
+                    {
+                        berries.SetActive(true);
+                    }
+                    break;
+                default:
+                    Debug.Log("You Won!");
+                    break;
+            }
+
+
+        }
+
+        if (other.CompareTag("Berry"))
+        {
+            
             foreach (var berry in berries)
             {
                 if (other.gameObject == berry)
                 {
+                    berriesCollected++;
                     Destroy(berry);
                     break; // exit the loop once the object is destroyed
                 }
