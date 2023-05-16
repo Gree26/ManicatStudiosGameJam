@@ -197,7 +197,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         int layerMask = Physics.AllLayers;
 
-        if (Physics.Raycast(transform.position, Vector3.down * 1.1f, .55f, layerMask, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(transform.position, Vector3.down * 1.3f, .55f, layerMask, QueryTriggerInteraction.Ignore))
         {
             return true;
         }
