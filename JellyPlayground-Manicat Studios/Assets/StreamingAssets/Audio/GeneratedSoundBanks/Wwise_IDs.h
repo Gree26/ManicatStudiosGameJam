@@ -14,11 +14,13 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_ACCELERATION = 794457826U;
+        static const AkUniqueID PLAY_BERRYCOLLECTED = 2151728835U;
         static const AkUniqueID PLAY_CLICK = 311910498U;
         static const AkUniqueID PLAY_COLLISION = 1553219250U;
         static const AkUniqueID PLAY_CROUCH = 3989731860U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_MUSICMAIN = 3170845728U;
+        static const AkUniqueID PLAY_SLIDE = 3715669161U;
         static const AkUniqueID STOP_MUSICMAIN = 1408954334U;
     } // namespace EVENTS
 

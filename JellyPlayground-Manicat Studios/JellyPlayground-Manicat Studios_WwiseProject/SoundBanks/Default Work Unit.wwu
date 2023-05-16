@@ -21,11 +21,13 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_Slide" ID="{E86E62DB-1231-4240-8A1D-C193509AED97}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Jump" ID="{54DDD253-95E9-4495-B948-93F8FE4C842F}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Crouch" ID="{DB04E758-3FB1-4657-AD63-94D752109224}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Acceleration" ID="{3E1D5EA0-4E2F-47D5-8F63-A2F2CF528669}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Click" ID="{30A3913C-6EB8-4A0A-B27E-00AE3125BF40}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Collision" ID="{B5E02E42-2BAF-4AAE-A35E-492DADF3EBAC}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BerryCollected" ID="{AD28C0C9-C148-4CD8-B644-B080EEA09253}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
