@@ -12,6 +12,8 @@ public class IngameMenuController : MonoBehaviour
     private Page _infoMenu;
     private UiController _uiController;
 
+    public AK.Wwise.State current;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,9 @@ public class IngameMenuController : MonoBehaviour
             InputHandler.instance.LockMouse(false);
             _uiController.PushPage(_pauseMenu);
             Time.timeScale = 0;
+            //Enter
+            AkSoundEngine.SetState("Music_States","PauseMenuMusic");
+
         }
         else
         {
@@ -34,6 +39,7 @@ public class IngameMenuController : MonoBehaviour
             {
                 InputHandler.instance.LockMouse(true);
                 Time.timeScale = 1;
+                AkSoundEngine.SetState("Music_States", "Sec1");
             }
         }
     }
