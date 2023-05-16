@@ -5,7 +5,9 @@
 			<ChildrenList>
 				<StateGroup Name="Music_States" ID="{BCF4E616-1045-48BA-83D5-EE3091C779BE}">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
 						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{FCF5BB6B-919D-4E72-AF03-FB17FFFE511B}"/>
