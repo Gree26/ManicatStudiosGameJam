@@ -2,7 +2,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	311910498	Play_Click			\Default Work Unit\Play_Click	
 	794457826	Play_Acceleration			\Default Work Unit\Play_Acceleration	
 	1553219250	Play_Collision			\Default Work Unit\Play_Collision	
+	2151728835	Play_BerryCollected			\Default Work Unit\Play_BerryCollected	
 	3689126666	Play_Jump			\Default Work Unit\Play_Jump	
+	3715669161	Play_Slide			\Default Work Unit\Play_Slide	
+	3908484415	Play_Break			\Default Work Unit\Play_Break	
 	3989731860	Play_Crouch			\Default Work Unit\Play_Crouch	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -12,9 +15,12 @@ Modulator LFO	ID	Name			Wwise Object Path	Notes
 	1047893173	LFO_Acceleration			\Default Work Unit\LFO_Acceleration	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	121089721	UI_Click-001	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_UI_Click-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Click-001		176464
-	158642868	SFX_Collision-001	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Collision-001_4141066F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Collision-001		101008
-	635465996	SFX_Jump-001	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Jump-001_11F78324.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Jump-001		86224
-	884275306	SFX_Crouch-001	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Squeeze-001_A1D268FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Crouch-001		52320
-	1032208743	SFX_Acceleration-001	D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Acceleration-001_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Acceleration-001		1764064
+	121089721	UI_Click-001	D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_UI_Click-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Click-001		176464
+	158642868	SFX_Collision-001	D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Collision-001_4141066F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Collision-001		101008
+	226018163	SFX_Break-001	D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Break-001_3DF8F83B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Break-001		162956
+	287735734	SFX_BerryCollected-001	D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_BerryCollected-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_BerryCollected-001		176464
+	387000028	SFX_Slide-001	D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Slide-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Slide-001		176464
+	635465996	SFX_Jump-001	D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Jump-001_11F78324.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Jump-001		86224
+	884275306	SFX_Crouch-001	D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Squeeze-001_A1D268FF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Crouch-001		52320
+	1032208743	SFX_Acceleration-001	D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Windows\SFX\SFX_Acceleration-001_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Acceleration-001		1764064
 

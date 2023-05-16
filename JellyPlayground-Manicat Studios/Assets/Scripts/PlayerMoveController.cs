@@ -60,6 +60,10 @@ public class PlayerMoveController : MonoBehaviour
     [SerializeField] AK.Wwise.Event crouchEvent;
     [SerializeField] AK.Wwise.Event collisionEvent;
     [SerializeField] AK.Wwise.Event accelerationEvent;
+    [SerializeField] AK.Wwise.Event berryCollectedEvent;
+    [SerializeField] AK.Wwise.Event breakEvent;
+    [SerializeField] AK.Wwise.Event slideEvent;
+
     [SerializeField] AK.Wwise.RTPC RTPC_Acceleration;
 
     [SerializeField] private float _brakeForce = 0.001f;
@@ -106,6 +110,8 @@ public class PlayerMoveController : MonoBehaviour
         if (_isBraking)
         {
             ModifyMoveSpeed(-_brakeForce, 0, _maxMoveSpeed);
+            breakEvent.Post(this.gameObject);
+            
         }
 
         if (DetectCollision())
@@ -117,6 +123,7 @@ public class PlayerMoveController : MonoBehaviour
         }
         RTPC_Acceleration.SetValue(this.gameObject,_moveSpeed);
         _currentTime += Time.deltaTime;
+        
     }
 
     private void Jump()
@@ -132,8 +139,10 @@ public class PlayerMoveController : MonoBehaviour
     private void NewMoveInput(Vector2 moveValue)
     {
         ModifyMoveSpeed(_moveSpeedAcceleration * moveValue.y, -_maxMoveSpeed, _maxMoveSpeed);
+        
 
         transform.rotation = Quaternion.Euler( InputHandler.instance.MoveDirection);
+        
         positionModifier = moveValue;
     }
 
@@ -146,7 +155,7 @@ public class PlayerMoveController : MonoBehaviour
     private void ModifyMoveSpeed(float newValue, float minValue, float maxValue)
     {
         bool isGreater = _moveSpeed > _maxWalkSpeed;
-
+        
         if (isGreater && newValue >= 0)
             return;
 
@@ -176,7 +185,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         GameDataManager.isSpeed = true;
         _moveSpeed = _capSpeed;
-        jumpEvent.Post(this.gameObject);
+        slideEvent.Post(this.gameObject);
 
     }
 
@@ -271,6 +280,7 @@ public class PlayerMoveController : MonoBehaviour
                 if (other.gameObject == berry)
                 {
                     berriesCollected++;
+                    berryCollectedEvent.Post(this.gameObject);
                     Destroy(berry);
                     break; // exit the loop once the object is destroyed
                 }
