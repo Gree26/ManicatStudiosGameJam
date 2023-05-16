@@ -30,7 +30,9 @@ public class InputHandler : MonoBehaviour
 
     public Action Interact;
 
+    public Action Escape;
 
+    public event Action<bool> BrakeInput;
 
     private void Awake()
     {
@@ -83,13 +85,23 @@ public class InputHandler : MonoBehaviour
             Interact?.Invoke();
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
         {
             Slide?.Invoke(true);
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))
         {
             Slide?.Invoke(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Escape?.Invoke();
+        }
+
+        if (BrakeInput != null)
+        {
+            BrakeInput(Input.GetKey(KeyCode.LeftShift));
         }
     }
 

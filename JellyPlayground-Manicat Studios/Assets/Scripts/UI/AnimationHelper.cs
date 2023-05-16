@@ -38,7 +38,7 @@ public class AnimationHelper : MonoBehaviour
         {
             transform.anchoredPosition = Vector2.Lerp(startPos, Vector2.zero, time);
             yield return null;
-            time += Time.deltaTime * Speed;
+            time += Time.unscaledDeltaTime * Speed;
         }
 
         transform.anchoredPosition = Vector2.zero;
@@ -78,7 +78,7 @@ public class AnimationHelper : MonoBehaviour
         {
             transform.anchoredPosition = Vector2.Lerp(Vector2.zero, endPos, time);
             yield return null;
-            time += Time.deltaTime * Speed;
+            time += Time.unscaledDeltaTime * Speed;
         }
 
         transform.anchoredPosition = endPos;
@@ -103,7 +103,7 @@ public class AnimationHelper : MonoBehaviour
             //Changes whether we are fading in or out
             canvasGroup.alpha = Mathf.Lerp(0, 1, time);
             yield return null;
-            time += Time.deltaTime * Speed;
+            time += Time.unscaledDeltaTime * Speed;
         }
 
         canvasGroup.alpha = 1;
@@ -128,7 +128,7 @@ public class AnimationHelper : MonoBehaviour
             //Changes whether we are fading in or out
             canvasGroup.alpha = Mathf.Lerp(1, 0, time);
             yield return null;
-            time += Time.deltaTime * Speed;
+            time += Time.unscaledDeltaTime * Speed;
         }
 
         canvasGroup.alpha = 0;
@@ -150,7 +150,7 @@ public class AnimationHelper : MonoBehaviour
             //Changes whether we are fading in or out
             transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, time);
             yield return null;
-            time += Time.deltaTime * Speed;
+            time += Time.unscaledDeltaTime * Speed;
         }
 
         transform.localScale = Vector3.one;
@@ -172,7 +172,7 @@ public class AnimationHelper : MonoBehaviour
             //Changes whether we are fading in or out
             transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one, time);
             yield return null;
-            time += Time.deltaTime * Speed;
+            time += Time.unscaledDeltaTime * Speed;
         }
 
         transform.localScale = Vector3.zero;

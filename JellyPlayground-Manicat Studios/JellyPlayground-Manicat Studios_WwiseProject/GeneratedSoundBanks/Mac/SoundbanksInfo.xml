@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3815618014">
+		<SoundBank Id="1355168291" Language="SFX" Hash="460494602">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3017428748" Language="SFX" Hash="304538468">
+		<SoundBank Id="3017428748" Language="SFX" Hash="1511960616">
 			<ObjectPath>\SoundBanks\Default Work Unit\MusicBank</ObjectPath>
 			<ShortName>MusicBank</ShortName>
 			<Path>MusicBank.bnk</Path>
@@ -93,20 +93,55 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017475316" Language="SFX" Hash="3488489256">
+		<SoundBank Id="3017475316" Language="SFX" Hash="3453286131">
 			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
 			<ShortName>SfxBank</ShortName>
 			<Path>SfxBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Play_Jump" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="794457826" Name="Play_Acceleration" ObjectPath="\Events\Default Work Unit\Play_Acceleration" MaxAttenuation="100." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1032208743" Language="SFX">
+							<ShortName>SFX_Acceleration-001.wav</ShortName>
+							<Path>SFX\SFX_Acceleration-001_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="311910498" Name="Play_Click" ObjectPath="\Events\Default Work Unit\Play_Click" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="121089721" Language="SFX">
+							<ShortName>SFX_UI_Click-001.wav</ShortName>
+							<Path>SFX\SFX_UI_Click-001_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1553219250" Name="Play_Collision" ObjectPath="\Events\Default Work Unit\Play_Collision" DurationType="OneShot" DurationMin="0.572254" DurationMax="0.572254">
+					<IncludedMemoryFiles>
+						<File Id="158642868" Language="SFX">
+							<ShortName>SFX_Collision-001.wav</ShortName>
+							<Path>SFX\SFX_Collision-001_4141066F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3989731860" Name="Play_Crouch" ObjectPath="\Events\Default Work Unit\Play_Crouch" DurationType="OneShot" DurationMin="0.296243" DurationMax="0.296243">
+					<IncludedMemoryFiles>
+						<File Id="884275306" Language="SFX">
+							<ShortName>SFX_Squeeze-001.wav</ShortName>
+							<Path>SFX\SFX_Squeeze-001_A1D268FF.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Play_Jump" DurationType="OneShot" DurationMin="0.488439" DurationMax="0.488439">
 					<IncludedMemoryFiles>
 						<File Id="635465996" Language="SFX">
 							<ShortName>SFX_Jump-001.wav</ShortName>
-							<Path>SFX\SFX_Jump-001_10C4C929.wem</Path>
+							<Path>SFX\SFX_Jump-001_11F78324.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="53139121" Name="Acceleration_Parameter" ObjectPath="\Game Parameters\Default Work Unit\Acceleration_Parameter"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

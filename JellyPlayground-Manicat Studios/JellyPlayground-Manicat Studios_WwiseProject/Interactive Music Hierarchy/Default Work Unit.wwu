@@ -201,6 +201,7 @@
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{EBCA4B8E-F4F2-4F86-816B-56A3DA412EB3}" ShortID="1061397364">
 											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="JellyRacer_Print_125bpm_Loading_01" ID="{2B4FA13E-20C2-440D-82F2-22727009349F}"/>
@@ -382,6 +383,7 @@
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{EB2E7020-E576-48A9-945B-E7ABDDE2774D}" ShortID="120357882">
 											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="JellyRacer_Print_125bpm_Sec1_01" ID="{4E661779-73F3-4258-AA97-1DFB30252BFD}"/>
@@ -708,6 +710,9 @@
 							<ObjectLists/>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{D086C3E6-E613-44B0-A726-56E7A4397ACF}" ShortID="412791527">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{F61DA221-AD8E-467A-BA0F-56A34CA9DF8E}" ShortID="399246061">
 											<PropertyList>
@@ -717,7 +722,7 @@
 										</MusicPlaylistItem>
 										<MusicPlaylistItem Name="" ID="{9A7ACD37-A9ED-4B83-A8FB-25B4674D1F57}" ShortID="312038117">
 											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="LoopCount" Type="int16" Value="2"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="JellyRacer_Print_125bpm_Sec2_02" ID="{E6103DFD-57A8-49E2-B7E0-25C2B3AFB4F5}"/>
@@ -1025,6 +1030,7 @@
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{F932515F-B65A-4409-B3B3-EBF99BF4C14F}" ShortID="647939492">
 											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{BBF3FC1F-C4F2-4673-8EC5-842664B74C23}"/>

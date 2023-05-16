@@ -51,6 +51,66 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Click" ID="{30A3913C-6EB8-4A0A-B27E-00AE3125BF40}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{D4542C11-4C28-410B-9954-2051C58F1593}" ShortID="1061676064">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Click-001" ID="{F7362416-B513-4658-81F6-E66372FC1A8C}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Crouch" ID="{DB04E758-3FB1-4657-AD63-94D752109224}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{2AB4D754-6630-4E06-99B7-397FE888DD69}" ShortID="747827241">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Crouch-001" ID="{68E4C5EE-A6C9-47CC-8DB0-7AE79BC631DA}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Collision" ID="{B5E02E42-2BAF-4AAE-A35E-492DADF3EBAC}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{1DD61C2E-3C04-440F-936B-0E8DD1128DD0}" ShortID="259774150">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Collision-001" ID="{F0CA5A46-CDF9-4D65-9566-F9791A5ABABE}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Acceleration" ID="{3E1D5EA0-4E2F-47D5-8F63-A2F2CF528669}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{2BAAA462-F85B-4D27-A040-9D9A0A10C34D}" ShortID="705901430">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
