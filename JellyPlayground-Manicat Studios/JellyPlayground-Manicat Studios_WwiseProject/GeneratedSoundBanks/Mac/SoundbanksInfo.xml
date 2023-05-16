@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3017428748" Language="SFX" Hash="1511960616">
+		<SoundBank Id="3017428748" Language="SFX" Hash="2172984576">
 			<ObjectPath>\SoundBanks\Default Work Unit\MusicBank</ObjectPath>
 			<ShortName>MusicBank</ShortName>
 			<Path>MusicBank.bnk</Path>
@@ -93,7 +93,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017475316" Language="SFX" Hash="3453286131">
+		<SoundBank Id="3017475316" Language="SFX" Hash="2995653562">
 			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
 			<ShortName>SfxBank</ShortName>
 			<Path>SfxBank.bnk</Path>
@@ -103,6 +103,14 @@
 						<File Id="1032208743" Language="SFX">
 							<ShortName>SFX_Acceleration-001.wav</ShortName>
 							<Path>SFX\SFX_Acceleration-001_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2151728835" Name="Play_BerryCollected" ObjectPath="\Events\Default Work Unit\Play_BerryCollected" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="287735734" Language="SFX">
+							<ShortName>SFX_BerryCollected-001.wav</ShortName>
+							<Path>SFX\SFX_BerryCollected-001_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -135,6 +143,14 @@
 						<File Id="635465996" Language="SFX">
 							<ShortName>SFX_Jump-001.wav</ShortName>
 							<Path>SFX\SFX_Jump-001_11F78324.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3715669161" Name="Play_Slide" ObjectPath="\Events\Default Work Unit\Play_Slide" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="387000028" Language="SFX">
+							<ShortName>SFX_Slide-001.wav</ShortName>
+							<Path>SFX\SFX_Slide-001_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

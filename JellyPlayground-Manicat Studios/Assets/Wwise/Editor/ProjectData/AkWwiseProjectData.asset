@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 82fc0bd2067f0448b8bfcd93e2c2ccaf
     GuidInternal: 
-    m_lastTime: -8585174810671333003
+    m_lastTime: -8585174784939956411
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 09d029b394af344a8f56b201e1870900
     GuidInternal: 
-    m_lastTime: -8585174716023429503
+    m_lastTime: -8585174199989186207
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -117,7 +117,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e4ae0fd081baf545b5ce7368c64d886d
     GuidInternal: 
-    m_lastTime: -8585174750366639690
+    m_lastTime: -8585173855089618192
     List:
     - name: MusicBank
       guid: 78d6980c985d64478448b1b5eece7927
@@ -159,7 +159,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 292a168822454f4d9945239e50d1037c
     GuidInternal: 
-    m_lastTime: -8585174662692556401
+    m_lastTime: -8585173855351318830
     List:
     - name: Play_Acceleration
       guid: a05e1d3e2f4ed5478f63a2f2cf528669
@@ -178,6 +178,23 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: Play_BerryCollected
+      guid: c9c028ad48c1d84cb644b080eea09253
+      id: 2151728835
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 292a168822454f4d9945239e50d1037c
+      - ElementName: Play_BerryCollected
+        ObjectType: 3
+        guid: c9c028ad48c1d84cb644b080eea09253
+      Path: Events\Default Work Unit\Play_BerryCollected
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: Play_Click
       guid: 3c91a330b86e0a4ab27e00ae3125bf40
       id: 311910498
@@ -263,6 +280,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Slide
+      guid: db626ee8311240428a1dc193509aed97
+      id: 3715669161
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 292a168822454f4d9945239e50d1037c
+      - ElementName: Play_Slide
+        ObjectType: 3
+        guid: db626ee8311240428a1dc193509aed97
+      Path: Events\Default Work Unit\Play_Slide
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: Stop_MusicMain
       guid: ab77168550001e41b51d7d2c2be81ee1
       id: 1408954334
@@ -292,7 +326,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f9e9c4d822b8de4eafc631e3387356d0
     GuidInternal: 
-    m_lastTime: -8585174716023789569
+    m_lastTime: -8585174200003839579
     List:
     - name: Acceleration_Parameter
       guid: 26ca960bdcda2f4aa080182248ccd4ed
@@ -320,7 +354,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 956ec1a4b1fc3045b78f32a2a3a415a1
     GuidInternal: 
-    m_lastTime: -8585174810671348011
+    m_lastTime: -8585174199988598339
     List:
     - name: Music_States
       guid: 16e6f4bc4510ba4883d5ee3091c779be
@@ -464,7 +498,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 058a2492f620334ba16ff78b7c7c630d
     GuidInternal: 
-    m_lastTime: -8585174810671343011
+    m_lastTime: -8585174784939956411
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -478,10 +512,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: e078044b6d44334e892c8288a024a76f
     GuidInternal: 
-    m_lastTime: -8585174810671338002
+    m_lastTime: -8585174784939956411
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 010000000500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

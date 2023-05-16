@@ -42,6 +42,10 @@ public class PlayerMoveController : MonoBehaviour
     [SerializeField] AK.Wwise.Event jumpEvent;
     [SerializeField] AK.Wwise.Event crouchEvent;
     [SerializeField] AK.Wwise.Event collisionEvent;
+    [SerializeField] AK.Wwise.Event boostEvent;
+    [SerializeField] AK.Wwise.Event berryCollectEvent;
+
+
     [SerializeField] AK.Wwise.Event accelerationEvent;
     [SerializeField] AK.Wwise.RTPC RTPC_Acceleration;
 
@@ -161,7 +165,7 @@ public class PlayerMoveController : MonoBehaviour
     {
         GameDataManager.isSpeed = true;
         _moveSpeed = _capSpeed;
-        jumpEvent.Post(this.gameObject);
+        boostEvent.Post(this.gameObject);
 
     }
 
@@ -247,6 +251,7 @@ public class PlayerMoveController : MonoBehaviour
                 if (other.gameObject == berry)
                 {
                     berriesCollected++;
+                    berryCollectEvent.Post(this.gameObject);
                     Destroy(berry);
                     break; // exit the loop once the object is destroyed
                 }

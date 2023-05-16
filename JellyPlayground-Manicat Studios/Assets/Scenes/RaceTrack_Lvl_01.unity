@@ -2656,7 +2656,7 @@ MonoBehaviour:
   jumpEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0d050e9c402735c41b2291f68bf0cc84, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 0e94b91f027f8394e9658c40e08a667e, type: 2}
   crouchEvent:
     idInternal: 0
     valueGuidInternal: 
@@ -2665,6 +2665,14 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4b94f5cfdd72716469a76cde01afdb88, type: 2}
+  boostEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0d050e9c402735c41b2291f68bf0cc84, type: 2}
+  berryCollectEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 580bc3a76e649e14381b2edaacd8f06a, type: 2}
   accelerationEvent:
     idInternal: 0
     valueGuidInternal: 
@@ -2762,7 +2770,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152121960}
   m_LocalRotation: {x: -0, y: 0.21509264, z: -0, w: 0.9765937}
-  m_LocalPosition: {x: 84.15, y: 1.9, z: 67.2}
+  m_LocalPosition: {x: 33.2, y: 1.9, z: 17.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2917,37 +2925,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 09892e65cf27b2b4db57e58de940aa9d, type: 3}
   m_PrefabInstance: {fileID: 1531642717}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &160179741
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 160179742}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &160179742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160179741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.439, y: 2.15, z: 23.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &162545691
 GameObject:
   m_ObjectHideFlags: 0
