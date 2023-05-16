@@ -6,7 +6,9 @@ public class SoccerBall : MonoBehaviour
 {
 
     public GameObject goal;
+    public GameObject goal2;
     public ParticleSystem goalParticle;
+    public ParticleSystem goalParticle2;
     public float kickForce;
 
     private void OnCollisionEnter(Collision collision)
@@ -25,5 +27,10 @@ public class SoccerBall : MonoBehaviour
         {
             goalParticle.Play();
         }
+        if (other.gameObject == goal2)
+        {
+            goalParticle2.Play();
+        }
     }
+   
 }
