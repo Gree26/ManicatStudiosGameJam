@@ -23,6 +23,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Jump" ID="{54DDD253-95E9-4495-B948-93F8FE4C842F}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Crouch" ID="{DB04E758-3FB1-4657-AD63-94D752109224}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Acceleration" ID="{C980CB0D-236A-47A7-86CE-7DF3C65BE110}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Acceleration" ID="{3E1D5EA0-4E2F-47D5-8F63-A2F2CF528669}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Click" ID="{30A3913C-6EB8-4A0A-B27E-00AE3125BF40}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BerryCollected" ID="{3A32EC3E-4E05-4A79-A166-32FC94C3BFDD}" WorkUnitID="{88162A29-4522-4D4F-9945-239E50D1037C}" Origin="Manual" Filter="7"/>

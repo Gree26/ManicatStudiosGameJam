@@ -62,7 +62,7 @@ public class PlayerMoveController : MonoBehaviour
     [SerializeField] AK.Wwise.Event jumpEvent;
     [SerializeField] AK.Wwise.Event crouchEvent;
     [SerializeField] AK.Wwise.Event collisionEvent;
-    [SerializeField] AK.Wwise.Event accelerationEvent;
+    [SerializeField] public AK.Wwise.Event accelerationEvent;
     [SerializeField] AK.Wwise.Event berryCollectedEvent;
     [SerializeField] AK.Wwise.Event breakEvent;
     [SerializeField] AK.Wwise.Event slideEvent;
@@ -126,8 +126,11 @@ public class PlayerMoveController : MonoBehaviour
             GameDataManager.isSpeed = false;
             isStunned = true;
         }
-        RTPC_Acceleration.SetValue(this.gameObject,_moveSpeed);
+
+        
         _currentTime += Time.deltaTime;
+
+        RTPC_Acceleration.SetValue(this.gameObject, _moveSpeed);
 
     }
 

@@ -163,6 +163,24 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Acceleration" ID="{C980CB0D-236A-47A7-86CE-7DF3C65BE110}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{FFC2E5BD-36B5-4243-9388-91E7FFE453C1}" ShortID="808500564">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	794457826	Play_Acceleration			\Default Work Unit\Play_Acceleration	
 	1553219250	Play_Collision			\Default Work Unit\Play_Collision	
 	2151728835	Play_BerryCollected			\Default Work Unit\Play_BerryCollected	
+	3178709332	Stop_Acceleration			\Default Work Unit\Stop_Acceleration	
 	3689126666	Play_Jump			\Default Work Unit\Play_Jump	
 	3715669161	Play_Slide			\Default Work Unit\Play_Slide	
 	3908484415	Play_Break			\Default Work Unit\Play_Break	
