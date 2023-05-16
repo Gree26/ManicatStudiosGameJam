@@ -55,5 +55,8 @@ public class IngameMenuController : MonoBehaviour
         Time.timeScale = 1;
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        AkSoundEngine.StopAll();
+        
     }
+
 }
