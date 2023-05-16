@@ -29,7 +29,7 @@ public class IngameMenuController : MonoBehaviour
             _uiController.PushPage(_pauseMenu);
             Time.timeScale = 0;
             //Enter
-            AkSoundEngine.SetState("Music_States","PauseMenuMusic");
+            AkSoundEngine.SetState("MenuState","MenuPause");
 
         }
         else
@@ -39,7 +39,7 @@ public class IngameMenuController : MonoBehaviour
             {
                 InputHandler.instance.LockMouse(true);
                 Time.timeScale = 1;
-                AkSoundEngine.SetState("Music_States", "Sec1");
+                AkSoundEngine.SetState("MenuState", "Gameplay");
             }
         }
     }
@@ -54,6 +54,7 @@ public class IngameMenuController : MonoBehaviour
         _uiController.PopAllPages();
         InputHandler.instance.LockMouse(true);
         Time.timeScale = 1;
+        AkSoundEngine.SetState("MenuState", "Gameplay");
     }
 
     public void RestartLevel()

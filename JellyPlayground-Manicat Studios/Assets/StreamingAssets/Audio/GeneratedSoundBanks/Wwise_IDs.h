@@ -27,6 +27,18 @@ namespace AK
 
     namespace STATES
     {
+        namespace MENUSTATE
+        {
+            static const AkUniqueID GROUP = 1548586727U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAMEPLAY = 89505537U;
+                static const AkUniqueID MENUPAUSE = 56378966U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MENUSTATE
+
         namespace MUSIC_STATES
         {
             static const AkUniqueID GROUP = 1690668539U;
@@ -59,7 +71,9 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID INGAME = 984691642U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MENU = 2607556080U;
         static const AkUniqueID MUSICBUS = 2886307548U;
         static const AkUniqueID SFX = 393239870U;
         static const AkUniqueID UI = 1551306167U;

@@ -10615,6 +10615,19 @@ MonoBehaviour:
   maxJumpDuration: 1
   minInterval: 1
   maxInterval: 3
+--- !u!65 &574472654
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574472651}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.8, z: 1.8}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &575345422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44977,6 +44990,19 @@ MonoBehaviour:
   maxJumpDuration: 1
   minInterval: 1
   maxInterval: 3
+--- !u!65 &1608648169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608648166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.8, z: 1.8}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!4 &1610097154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 09892e65cf27b2b4db57e58de940aa9d, type: 3}
@@ -52144,6 +52170,7 @@ GameObject:
   - component: {fileID: 2008558560}
   - component: {fileID: 2008558559}
   - component: {fileID: 2008558563}
+  - component: {fileID: 2008558564}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -52310,6 +52337,30 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 9b1f4425aba542240adba9920378e87d, type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
+--- !u!114 &2008558564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008558556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a464b7de655a6fa4bb72a2959c0f991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a888239bec8651f47a2dbbc54f5c3240, type: 2}
   valueIdInternal: 0
   groupIdInternal: 0
   valueGuidInternal: 

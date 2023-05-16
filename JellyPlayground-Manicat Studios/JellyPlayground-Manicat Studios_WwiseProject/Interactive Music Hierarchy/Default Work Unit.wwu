@@ -19,7 +19,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="MusicBus" ID="{04FF9FDE-685F-4268-8EE6-ECAA3A920983}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+							<ObjectRef Name="InGame" ID="{A5445A91-2DF9-4A27-8D93-2849A8694E23}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -915,6 +915,7 @@
 						<MusicPlaylistContainer Name="TitleMenu" ID="{A40C80E8-B7A4-4B26-A803-B64909ECACF6}" ShortID="364026483">
 							<PropertyList>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Tempo" Type="Real64" Value="119"/>
 							</PropertyList>
 							<ReferenceList>
@@ -922,7 +923,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+									<ObjectRef Name="MusicBus" ID="{04FF9FDE-685F-4268-8EE6-ECAA3A920983}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1039,661 +1040,6 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
-						<MusicPlaylistContainer Name="PauseMenu" ID="{A830017C-10A1-4F42-BC35-88DA6E47FB2A}" ShortID="682771431">
-							<PropertyList>
-								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
-								<Property Name="Tempo" Type="Real64" Value="119"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicSegment Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{CB52A7F6-4B5E-4BD7-AD04-4F07C3708035}" ShortID="409023468">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="48606.9515398227"/>
-										<Property Name="Tempo" Type="Real64" Value="119"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{A53B2C8F-123D-41D4-94EC-5286E104FF24}" ShortID="173370785">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{516039C2-BF7B-4C34-BC70-00B913EBEB99}">
-													<Language>SFX</Language>
-													<AudioFile>JellyRaces_Menu_Print_01 [2023-05-14 150629].wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="11827896"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{2D46F1F1-B336-4BCF-B051-ADBC7CAC6BD7}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{B2708631-F146-4900-A2D8-3418D7624136}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{8D4308FE-A150-42AB-A304-7DAD0FA90862}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="48403.3613445377"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{516039C2-BF7B-4C34-BC70-00B913EBEB99}"/>
-																					<PropertyCurveList>
-																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{EABB07E1-0987-4EDD-B51F-4496996E6EF5}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>48.40336</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{EFA386C7-49E1-41F4-A307-6975DC3472D4}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>48.40336</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{0071FBEB-7554-4880-8E7C-F11E6F8CF2FD}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="3"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>48.40336</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																					</PropertyCurveList>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{EA2DA56C-C495-48D1-BCA8-6E35816FA182}">
-														<PropertyList>
-															<Property Name="TimeMs" Type="Real64" Value="16134.4537815126"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{54F70BEB-FC5E-40C1-8121-4FEE9A7B7EAE}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="48403.3613445378"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]_01" ID="{B6BF2D93-29BB-4FB8-93F0-005EE8E83F97}" ShortID="671475066">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="16134.4537815128"/>
-										<Property Name="Tempo" Type="Real64" Value="119"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{32DBC4FE-8533-45E7-8D75-83832C7F52A9}" ShortID="661141938">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{20347674-6D4C-4E7E-A135-0354DDC76E80}">
-													<Language>SFX</Language>
-													<AudioFile>JellyRaces_Menu_Print_01 [2023-05-14 150629].wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="11827896"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{F5C9F50A-4147-4CD9-A27A-D57FFC2D2C87}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{7846EE53-8B94-4CAA-A55D-E08AE42FD7D0}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{731103FC-F908-4671-9154-230D524B4779}">
-																					<PropertyList>
-																						<Property Name="BeginTrimOffset" Type="Real64" Value="48403.3613445378"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="64537.8151260506"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																						<Property Name="PlayAt" Type="Real64" Value="-48403.3613445378"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{20347674-6D4C-4E7E-A135-0354DDC76E80}"/>
-																					<PropertyCurveList>
-																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{C11BBDA6-BEB9-4E7E-9898-F340887D6DD9}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>48.40336</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>64.53782</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{FFA6838D-1185-49B7-A8DE-61AF7685AB47}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>48.40336</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>64.53782</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{F99CB37D-9F42-4959-9385-1BB21A03FC56}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="3"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>48.40336</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>64.53782</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																					</PropertyCurveList>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{2AB16EF1-6726-43BA-86D0-F1D7EB9C52A5}"/>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{FB328343-2846-4485-8E47-DF4B3FCAB33B}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="16134.4537815126"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]_02" ID="{0EB31B01-45F9-46D4-B837-57885AB13744}" ShortID="390271638">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="16134.4537815127"/>
-										<Property Name="Tempo" Type="Real64" Value="119"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{F169159C-0117-4610-8B81-35DB933873BB}" ShortID="876504900">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{1BD11E3C-E826-4D95-BC3A-ADFCAAA40602}">
-													<Language>SFX</Language>
-													<AudioFile>JellyRaces_Menu_Print_01 [2023-05-14 150629].wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="11827896"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{FA20B0EA-CDF0-43BF-86D4-771FABBC6C08}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{1AC0A6AF-CDB0-42BD-B96C-A154E9689694}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{11961D53-17FA-4A20-9310-AE7B9824CD96}">
-																					<PropertyList>
-																						<Property Name="BeginTrimOffset" Type="Real64" Value="64537.8151260504"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="80672.2689075631"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																						<Property Name="PlayAt" Type="Real64" Value="-64537.8151260504"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{1BD11E3C-E826-4D95-BC3A-ADFCAAA40602}"/>
-																					<PropertyCurveList>
-																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{041817AB-DB3A-414E-A5B5-842B45DAA18F}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>64.53782</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>80.67227</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{7B116B87-2A52-4790-9D50-DBBFCBA0C333}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>64.53782</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>80.67227</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{42A953EC-BD84-4E00-B4EB-B50976EF4B36}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="3"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>64.53782</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>80.67227</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																					</PropertyCurveList>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{FBBC2DA6-DA9D-4BEB-8ECB-F27080847CFE}"/>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{2FC0DED7-62AB-4EEA-9E0D-0AB474148FF8}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="16134.4537815126"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]_03" ID="{1EB753EC-989E-46AD-97A3-B63D046E66BE}" ShortID="1013670998">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="32268.9075630253"/>
-										<Property Name="Tempo" Type="Real64" Value="119"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{041F2A57-2369-423B-A33F-2902C901F19C}" ShortID="41032425">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{5B77C133-618B-406B-A521-7F1212399641}">
-													<Language>SFX</Language>
-													<AudioFile>JellyRaces_Menu_Print_01 [2023-05-14 150629].wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="11827896"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{BFFC1ACB-22EC-49D9-998B-9D9149664BB5}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{097FA7CE-C256-4315-96FE-4E5338B7C10C}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{646313CB-0CF0-46DD-9493-EBCD749090AB}">
-																					<PropertyList>
-																						<Property Name="BeginTrimOffset" Type="Real64" Value="80672.2689075629"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="112941.176470588"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																						<Property Name="PlayAt" Type="Real64" Value="-80672.2689075629"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{5B77C133-618B-406B-A521-7F1212399641}"/>
-																					<PropertyCurveList>
-																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{F5F0AE0E-5EA2-44C5-9C87-4E42A8EAF0B9}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>80.67227</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>112.94118</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{BD97117B-E455-409F-B46D-68A774F97B50}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>80.67227</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>112.94118</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{3F59C2C1-5DD1-44FC-B68E-8CAA15D17969}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="3"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>80.67227</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>112.94118</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																					</PropertyCurveList>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{E02077D2-1BF8-4DFE-8AFE-479545E6456C}"/>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{20960163-894B-49D1-A6D9-856CB197F5FC}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="32268.9075630252"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-							</ChildrenList>
-							<TransitionList>
-								<MusicTransition Name="Root" ID="{871AF7D5-029B-4A91-B83D-B49E7FCF1AEF}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{5701E390-873F-407A-9203-35841BDA15A8}">
-											<TransitionInfo/>
-										</MusicTransition>
-									</ChildrenList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</TransitionList>
-							<ObjectLists/>
-							<Playlist>
-								<MusicPlaylistItem Name="" ID="{0902CF56-4AB6-42B5-8FDB-449FEE28FEE6}" ShortID="181717468">
-									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="0"/>
-										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-										<Property Name="PlayMode" Type="int16" Value="2"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{00398167-8DB5-445F-9885-232E45F49682}" ShortID="367674640">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{CB52A7F6-4B5E-4BD7-AD04-4F07C3708035}"/>
-										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{12AA6B3B-0571-483A-B9ED-9E8F0CE7A6AD}" ShortID="621634261">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]_01" ID="{B6BF2D93-29BB-4FB8-93F0-005EE8E83F97}"/>
-										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{BB4427DC-FE67-4FEB-9CE1-F66EDEB27DF4}" ShortID="214870276">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]_02" ID="{0EB31B01-45F9-46D4-B837-57885AB13744}"/>
-										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{92B02982-4D41-4811-8BB0-0BF533F70F17}" ShortID="391274330">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]_03" ID="{1EB753EC-989E-46AD-97A3-B63D046E66BE}"/>
-										</MusicPlaylistItem>
-									</ChildrenList>
-								</MusicPlaylistItem>
-							</Playlist>
-						</MusicPlaylistContainer>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{A19D901E-AAD4-42E5-9A70-5FCEEAEB6D3E}">
@@ -1765,7 +1111,7 @@
 								<PathElementRef Name="PauseMenuMusic" ID="{A282911F-A260-4B35-ABA4-660913B6A150}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="PauseMenu" ID="{A830017C-10A1-4F42-BC35-88DA6E47FB2A}" WorkUnitID="{691C610F-BCB7-47F0-BD1B-503879E49835}" Platform="Linked"/>
+								<NoObject Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1778,6 +1124,208 @@
 						</Entry>
 					</EntryList>
 				</MusicSwitchContainer>
+				<MusicPlaylistContainer Name="PauseMenu" ID="{A830017C-10A1-4F42-BC35-88DA6E47FB2A}" ShortID="682771431">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Tempo" Type="Real64" Value="119"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Menu" ID="{B3E972AE-9989-4071-8E8D-C4923B66BD2D}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{CB52A7F6-4B5E-4BD7-AD04-4F07C3708035}" ShortID="409023468">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="126462.904789237"/>
+								<Property Name="Tempo" Type="Real64" Value="119"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{A53B2C8F-123D-41D4-94EC-5286E104FF24}" ShortID="173370785">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{516039C2-BF7B-4C34-BC70-00B913EBEB99}">
+											<Language>SFX</Language>
+											<AudioFile>JellyRaces_Menu_Print_01 [2023-05-14 150629].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="11827896"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{2D46F1F1-B336-4BCF-B051-ADBC7CAC6BD7}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B2708631-F146-4900-A2D8-3418D7624136}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{8D4308FE-A150-42AB-A304-7DAD0FA90862}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="120152.698412698"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{516039C2-BF7B-4C34-BC70-00B913EBEB99}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{EABB07E1-0987-4EDD-B51F-4496996E6EF5}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>120.1527</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{EFA386C7-49E1-41F4-A307-6975DC3472D4}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>120.1527</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{0071FBEB-7554-4880-8E7C-F11E6F8CF2FD}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>120.1527</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{EA2DA56C-C495-48D1-BCA8-6E35816FA182}">
+												<PropertyList>
+													<Property Name="TimeMs" Type="Real64" Value="16134.4537815126"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{54F70BEB-FC5E-40C1-8121-4FEE9A7B7EAE}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="108907.56302521"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{871AF7D5-029B-4A91-B83D-B49E7FCF1AEF}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{5701E390-873F-407A-9203-35841BDA15A8}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{0902CF56-4AB6-42B5-8FDB-449FEE28FEE6}" ShortID="181717468">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+								<Property Name="PlayMode" Type="int16" Value="2"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{00398167-8DB5-445F-9885-232E45F49682}" ShortID="367674640">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="JellyRaces_Menu_Print_01 [2023-05-14 150629]" ID="{CB52A7F6-4B5E-4BD7-AD04-4F07C3708035}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

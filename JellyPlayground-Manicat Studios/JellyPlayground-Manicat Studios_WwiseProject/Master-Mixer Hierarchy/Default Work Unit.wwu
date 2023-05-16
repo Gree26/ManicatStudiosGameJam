@@ -20,6 +20,56 @@
 								<Property Name="Color" Type="int16" Value="10"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ChildrenList>
+								<Bus Name="InGame" ID="{A5445A91-2DF9-4A27-8D93-2849A8694E23}">
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="MenuState" ID="{3BAAF80B-EDB0-405F-BE87-40A4F7A3428E}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="MenuPause" ID="{71495EA0-E179-406A-8C8C-59340EB9F1A7}"/>
+												<CustomState Name="" ID="{0B47A048-4F6D-43DE-B3E6-D8FB1F03F1E9}" ShortID="592818918">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Gameplay" ID="{720F42AF-AE53-475A-B605-95C1ECEED5CC}"/>
+												<CustomState Name="" ID="{7FE9E526-CCDA-4949-A58B-00FEEE448F43}" ShortID="27849756"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Menu" ID="{B3E972AE-9989-4071-8E8D-C4923B66BD2D}">
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="MenuState" ID="{3BAAF80B-EDB0-405F-BE87-40A4F7A3428E}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="MenuPause" ID="{71495EA0-E179-406A-8C8C-59340EB9F1A7}"/>
+												<CustomState Name="" ID="{8F618BC2-1304-44D6-9108-7BB7E0762D3C}" ShortID="921588803"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Gameplay" ID="{720F42AF-AE53-475A-B605-95C1ECEED5CC}"/>
+												<CustomState Name="" ID="{93FDFA3D-F102-4EF3-8EE9-089301008004}" ShortID="230727394">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="SFX" ID="{44FEA071-99DB-4670-B5C0-5A6C9D8A7266}">
