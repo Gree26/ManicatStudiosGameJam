@@ -2756,6 +2756,7 @@ MonoBehaviour:
   checkpointIndex: 0
   _moveSpeedDrag: -0.01
   _moveSpeedAcceleration: 0.07
+  _turnSpeed: 2
   berriesCollected: 0
   berries:
   - {fileID: 370615851}

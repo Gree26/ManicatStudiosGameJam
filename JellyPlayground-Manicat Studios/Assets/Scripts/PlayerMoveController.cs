@@ -34,11 +34,14 @@ public class PlayerMoveController : MonoBehaviour
     public int checkpointIndex;
 
     [SerializeField]
-    private float _moveSpeedDrag = -.01f;
+    private float _moveSpeedDrag = -.25f;
 
     [SerializeField] [Min(0)]
     private float _moveSpeedAcceleration = .05f;
-    private float _moveSpeedDeceleration = -.075f;
+    private float _moveSpeedDeceleration = -.25f;
+
+    [SerializeField]
+    private float _turnSpeed = 0.1f;
 
 
     Vector2 positionModifier = Vector2.zero;
@@ -104,6 +107,8 @@ public class PlayerMoveController : MonoBehaviour
 
         ModifyMoveSpeed(_moveSpeedDrag, 0, _capSpeed);
 
+        transform.rotation = Quaternion.RotateTowards(this.transform.rotation, Quaternion.Euler(InputHandler.instance.MoveDirection), _turnSpeed);
+
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.forward * Mathf.Abs( positionModifier.y) * _moveSpeed * Time.deltaTime));
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.right * positionModifier.x * _maxMoveSpeed / 2 * Time.deltaTime));
 
@@ -123,7 +128,7 @@ public class PlayerMoveController : MonoBehaviour
         }
         RTPC_Acceleration.SetValue(this.gameObject,_moveSpeed);
         _currentTime += Time.deltaTime;
-        
+
     }
 
     private void Jump()
@@ -141,7 +146,7 @@ public class PlayerMoveController : MonoBehaviour
         ModifyMoveSpeed(_moveSpeedAcceleration * moveValue.y, -_maxMoveSpeed, _maxMoveSpeed);
         
 
-        transform.rotation = Quaternion.Euler( InputHandler.instance.MoveDirection);
+        
         
         positionModifier = moveValue;
     }
@@ -253,12 +258,24 @@ public class PlayerMoveController : MonoBehaviour
                     }
                     break;
                 case 2:
+                    foreach (var berry in berriesLap0)
+                    {
+                        berry.SetActive(false);
+                    }
                     foreach (var berries in berriesLap1)
                     {
                         berries.SetActive(true);
                     }
                     break;
                 case 3:
+                    foreach (var berry in berriesLap0)
+                    {
+                        berry.SetActive(false);
+                    }
+                    foreach (var berry in berriesLap1)
+                    {
+                        berry.SetActive(false);
+                    }
                     foreach (var berries in berriesLap2)
                     {
                         berries.SetActive(true);
