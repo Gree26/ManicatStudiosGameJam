@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Lamp_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5779962075532682753, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
@@ -1380,6 +1384,10 @@ PrefabInstance:
     - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
       propertyPath: m_Name
       value: SM_Lamp_01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -2049,6 +2057,10 @@ PrefabInstance:
     - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
       propertyPath: m_Name
       value: SM_Lamp_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -8909,6 +8921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Lamp_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5779962075532682753, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
@@ -9445,6 +9461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Lamp_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5779962075532682753, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
@@ -9523,6 +9543,10 @@ PrefabInstance:
     - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
       propertyPath: m_Name
       value: SM_Lamp_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -10405,6 +10429,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2243685578343210901, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898699290741581987, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3222493197778541945, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10457,9 +10489,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4887951125421806128, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769792733374852239, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868072686500348700, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7888999684006119798, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
       propertyPath: m_Name
       value: SoccerStands
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888999684006119798, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566257229724973897, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798875438350334981, guid: 1ae4488f5c2d73e438c270b55685584b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -10838,7 +10894,7 @@ GameObject:
   - component: {fileID: 579828750}
   - component: {fileID: 579828749}
   - component: {fileID: 579828748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Goal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18324,7 +18380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 722214501}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GoalParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18582,6 +18638,10 @@ PrefabInstance:
     - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
       propertyPath: m_Name
       value: SM_Lamp_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -26540,7 +26600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 880872479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GoalParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27915,6 +27975,10 @@ PrefabInstance:
     - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
       propertyPath: m_Name
       value: SM_Lamp_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -30188,6 +30252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Lamp_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5779962075532682753, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
@@ -30371,7 +30439,7 @@ GameObject:
   - component: {fileID: 1080411533}
   - component: {fileID: 1080411532}
   - component: {fileID: 1080411535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32154,6 +32222,10 @@ PrefabInstance:
     - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
       propertyPath: m_Name
       value: SM_Lamp_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -45612,6 +45684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Lamp_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5779962075532682753, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
@@ -48211,6 +48287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Lamp_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5779962075532682753, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
@@ -48388,6 +48468,10 @@ PrefabInstance:
     - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
       propertyPath: m_Name
       value: SM_Lamp_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592526923072191675, guid: 308803aad978b3c48a7a7174dc84ef86, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -52937,6 +53021,10 @@ PrefabInstance:
     - target: {fileID: 4420794929014223819, guid: cdf00bbbdd3ca7c44977f34893f06a59, type: 3}
       propertyPath: m_Name
       value: GoalScore2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4420794929014223819, guid: cdf00bbbdd3ca7c44977f34893f06a59, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9194029163257861917, guid: cdf00bbbdd3ca7c44977f34893f06a59, type: 3}
       propertyPath: looping
@@ -65630,6 +65718,10 @@ PrefabInstance:
     - target: {fileID: 4420794929014223819, guid: cdf00bbbdd3ca7c44977f34893f06a59, type: 3}
       propertyPath: m_Name
       value: GoalScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 4420794929014223819, guid: cdf00bbbdd3ca7c44977f34893f06a59, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9194029163257861917, guid: cdf00bbbdd3ca7c44977f34893f06a59, type: 3}
       propertyPath: looping
