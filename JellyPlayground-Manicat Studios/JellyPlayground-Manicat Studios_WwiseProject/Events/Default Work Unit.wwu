@@ -111,36 +111,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_BerryCollected" ID="{AD28C0C9-C148-4CD8-B644-B080EEA09253}">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="16"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Action Name="" ID="{989A3079-5286-481D-B4F2-5BD41C07D212}" ShortID="54654899">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SFX_BerryCollected-001" ID="{D3CE6D87-8FB7-44D0-8B3D-778A987C233C}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Slide" ID="{E86E62DB-1231-4240-8A1D-C193509AED97}">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="16"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Action Name="" ID="{4181E819-AABB-4470-9433-70C9FB036B5C}" ShortID="875873436">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SFX_Slide-001" ID="{029576E7-BB31-45FB-ACC6-3D487D26490B}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
