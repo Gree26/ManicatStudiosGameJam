@@ -45,6 +45,9 @@ public class PlayerMoveController : MonoBehaviour
     [SerializeField] AK.Wwise.Event accelerationEvent;
     [SerializeField] AK.Wwise.RTPC RTPC_Acceleration;
 
+    [SerializeField] private float _brakeForce = 0.001f;
+    [SerializeField] private bool _isBraking = false;
+
     private bool isStunned
     {
         set
@@ -60,6 +63,8 @@ public class PlayerMoveController : MonoBehaviour
         InputHandler.instance.MoveInput += NewMoveInput;
         InputHandler.instance.Jump += Jump;
         InputHandler.instance.Slide += Slide;
+        InputHandler.instance.BrakeInput += Brake;
+
         _scale = this.transform.localScale;
         checkpointIndex = 0;
 
@@ -82,7 +87,12 @@ public class PlayerMoveController : MonoBehaviour
 
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.forward * Mathf.Abs( positionModifier.y) * _moveSpeed * Time.deltaTime));
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.right * positionModifier.x * _maxMoveSpeed / 2 * Time.deltaTime));
-        
+
+        if (_isBraking)
+        {
+            ModifyMoveSpeed(-_brakeForce, 0, _maxMoveSpeed);
+        }
+
         if (DetectCollision())
         {
             _myRigidBody.velocity = new Vector3(-this.transform.forward.x * 10, 3, -this.transform.forward.y * 10) * (_moveSpeed/ _capSpeed);
@@ -188,6 +198,11 @@ public class PlayerMoveController : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         _stunned = false;
+    }
+
+    private void Brake(bool isBraking)
+    {
+        _isBraking = isBraking;
     }
 
     private void OnTriggerEnter(Collider other)

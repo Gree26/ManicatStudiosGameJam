@@ -32,6 +32,8 @@ public class InputHandler : MonoBehaviour
 
     public Action Escape;
 
+    public event Action<bool> BrakeInput;
+
     private void Awake()
     {
         if (singletonInstance == null)
@@ -95,6 +97,11 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Escape?.Invoke();
+        }
+
+        if (BrakeInput != null)
+        {
+            BrakeInput(Input.GetKey(KeyCode.LeftShift));
         }
     }
 

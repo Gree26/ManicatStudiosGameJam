@@ -2667,6 +2667,8 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: aa4a2d1f8ebdd764cb8933acc4678cef, type: 2}
+  _brakeForce: 0.1
+  _isBraking: 0
 --- !u!54 &152121962
 Rigidbody:
   m_ObjectHideFlags: 0
