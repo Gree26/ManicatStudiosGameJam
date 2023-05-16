@@ -60,6 +60,8 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID ACCELERATION_PARAMETER = 53139121U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

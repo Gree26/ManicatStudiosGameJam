@@ -11,10 +11,14 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="724501063">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3949990580">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\SFXVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1548586727" Name="MenuState" ObjectPath="\States\Default Work Unit\MenuState" GUID="{3BAAF80B-EDB0-405F-BE87-40A4F7A3428E}">
 					<States>

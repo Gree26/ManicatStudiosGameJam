@@ -18,6 +18,10 @@ Custom State	ID	Name	State Group	Owner		Notes
 	230727394	Gameplay	MenuState	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MusicBus\Menu		
 	592818918	MenuPause	MenuState	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MusicBus\InGame		
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	988953028	SFXVolume			\Default Work Unit\SFXVolume	
+	2346531308	MusicVolume			\Default Work Unit\MusicVolume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	984691642	InGame			\Default Work Unit\Master Audio Bus\MusicBus\InGame	

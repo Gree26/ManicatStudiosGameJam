@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 09d029b394af344a8f56b201e1870900
     GuidInternal: 
-    m_lastTime: -8585173318412213676
+    m_lastTime: -8585173305785847128
     List:
     - name: InGame
       guid: 915a44a5f92d274a8d932849a8694e23
@@ -383,7 +383,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f9e9c4d822b8de4eafc631e3387356d0
     GuidInternal: 
-    m_lastTime: -8585174716023789569
+    m_lastTime: -8585173306101285990
     List:
     - name: Acceleration_Parameter
       guid: 26ca960bdcda2f4aa080182248ccd4ed
@@ -399,6 +399,34 @@ MonoBehaviour:
         ObjectType: 13
         guid: 26ca960bdcda2f4aa080182248ccd4ed
       Path: Game Parameters\Default Work Unit\Acceleration_Parameter
+    - name: MusicVolume
+      guid: 94a522bfb0f80248be75e072793d3a77
+      id: 2346531308
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f9e9c4d822b8de4eafc631e3387356d0
+      - ElementName: MusicVolume
+        ObjectType: 13
+        guid: 94a522bfb0f80248be75e072793d3a77
+      Path: Game Parameters\Default Work Unit\MusicVolume
+    - name: SFXVolume
+      guid: 67b70cb962109a46a555330b0241bd0d
+      id: 988953028
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f9e9c4d822b8de4eafc631e3387356d0
+      - ElementName: SFXVolume
+        ObjectType: 13
+        guid: 67b70cb962109a46a555330b0241bd0d
+      Path: Game Parameters\Default Work Unit\SFXVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -638,7 +666,7 @@ MonoBehaviour:
     m_lastTime: -8585174810671338002
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 110000001200000013000000
+  ExpandedWaapiItemIds: 11000000120000001300000015000000160000001d0000001e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

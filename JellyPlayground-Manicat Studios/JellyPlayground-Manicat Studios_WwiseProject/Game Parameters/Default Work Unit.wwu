@@ -9,6 +9,18 @@
 						<Property Name="Max" Type="Real64" Value="13"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="SFXVolume" ID="{B90CB767-1062-469A-A555-330B0241BD0D}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="MusicVolume" ID="{BF22A594-F8B0-4802-BE75-E072793D3A77}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
