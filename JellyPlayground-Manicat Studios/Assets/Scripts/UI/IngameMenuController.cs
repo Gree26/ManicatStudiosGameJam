@@ -82,7 +82,7 @@ public class IngameMenuController : MonoBehaviour
     {
         Debug.Log("Reload");
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-        stopMusicEvent.Post(this.gameObject);
+        AkSoundEngine.StopAll();
     }
 
     public void OpenInfoPage()
