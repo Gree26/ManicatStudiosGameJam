@@ -34,6 +34,8 @@ public class InputHandler : MonoBehaviour
 
     public event Action<bool> BrakeInput;
 
+    public bool lockOnStart = true;
+
     private void Awake()
     {
         if (singletonInstance == null)
@@ -45,8 +47,8 @@ public class InputHandler : MonoBehaviour
             Debug.LogError("Multiple instances of the singleton 'InputHandler' exist.");
             Destroy(this);
         }
-
-        LockMouse(true);
+        if(lockOnStart)
+            LockMouse(true);
     }
 
     // Update is called once per frame

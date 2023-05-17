@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,12 +35,16 @@ public class PlayerMoveController : MonoBehaviour
     public int checkpointIndex;
 
     [SerializeField]
-    private float _moveSpeedDrag = -.01f;
+    private float _moveSpeedDrag = -.25f;
 
     [SerializeField] [Min(0)]
     private float _moveSpeedAcceleration = .05f;
-    private float _moveSpeedDeceleration = -.075f;
+    private float _moveSpeedDeceleration = -.25f;
 
+    [SerializeField]
+    private float _turnSpeed = 0.1f;
+
+    public static int stars = 0;
 
     Vector2 positionModifier = Vector2.zero;
 
@@ -50,16 +55,18 @@ public class PlayerMoveController : MonoBehaviour
     //Berries Collected
     [SerializeField] int berriesCollected;
     [SerializeField] List<GameObject> berries;
+    public static Action<int, int> BerryCollected;
+
 
     [SerializeField] public List<GameObject> berriesLap0;
     [SerializeField] public List<GameObject> berriesLap1;
-    [SerializeField] public List<GameObject> berriesLap2;
+    [SerializeField] public List<GameObject> berriesLap2;  
 
     //Sound------------------------------------------------
     [SerializeField] AK.Wwise.Event jumpEvent;
     [SerializeField] AK.Wwise.Event crouchEvent;
     [SerializeField] AK.Wwise.Event collisionEvent;
-    [SerializeField] AK.Wwise.Event accelerationEvent;
+    [SerializeField] public AK.Wwise.Event accelerationEvent;
     [SerializeField] AK.Wwise.Event berryCollectedEvent;
     [SerializeField] AK.Wwise.Event breakEvent;
     [SerializeField] AK.Wwise.Event slideEvent;
@@ -68,6 +75,13 @@ public class PlayerMoveController : MonoBehaviour
 
     [SerializeField] private float _brakeForce = 0.001f;
     [SerializeField] private bool _isBraking = false;
+
+    public GameObject teleportLocation;
+
+    [SerializeField]
+    JumpScare js;
+
+    public static Action GameOver;
 
     private bool isStunned
     {
@@ -90,7 +104,7 @@ public class PlayerMoveController : MonoBehaviour
         _scale = this.transform.localScale;
         checkpointIndex = 0;
 
-        accelerationEvent.Post(this.gameObject);
+
 
         _currentTime = 0;
     }
@@ -103,6 +117,8 @@ public class PlayerMoveController : MonoBehaviour
         }
 
         ModifyMoveSpeed(_moveSpeedDrag, 0, _capSpeed);
+
+        transform.rotation = Quaternion.RotateTowards(this.transform.rotation, Quaternion.Euler(InputHandler.instance.MoveDirection), _turnSpeed);
 
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.forward * Mathf.Abs( positionModifier.y) * _moveSpeed * Time.deltaTime));
         _myRigidBody.MovePosition(_myRigidBody.position + (this.transform.right * positionModifier.x * _maxMoveSpeed / 2 * Time.deltaTime));
@@ -121,9 +137,12 @@ public class PlayerMoveController : MonoBehaviour
             GameDataManager.isSpeed = false;
             isStunned = true;
         }
-        RTPC_Acceleration.SetValue(this.gameObject,_moveSpeed);
-        _currentTime += Time.deltaTime;
+
         
+        _currentTime += Time.deltaTime;
+
+        RTPC_Acceleration.SetValue(this.gameObject, _moveSpeed);
+
     }
 
     private void Jump()
@@ -141,7 +160,7 @@ public class PlayerMoveController : MonoBehaviour
         ModifyMoveSpeed(_moveSpeedAcceleration * moveValue.y, -_maxMoveSpeed, _maxMoveSpeed);
         
 
-        transform.rotation = Quaternion.Euler( InputHandler.instance.MoveDirection);
+        
         
         positionModifier = moveValue;
     }
@@ -229,9 +248,18 @@ public class PlayerMoveController : MonoBehaviour
         _isBraking = isBraking;
     }
 
+    private int previousLapBerries = 0;
+
     private void OnTriggerEnter(Collider other)
     {
-        if(LayerMask.LayerToName( other.gameObject.layer) == "Berry")
+           //prismo Lower Bounds Teleport
+        if (other.CompareTag("boundary"))
+        {
+            // Teleport the player to the specified location
+            transform.position = teleportLocation.transform.position;
+        }
+
+        if (LayerMask.LayerToName( other.gameObject.layer) == "Berry")
             Boost();  
 
             //EDITED BY MIKOANGELO
@@ -244,28 +272,63 @@ public class PlayerMoveController : MonoBehaviour
         if (other.CompareTag("Checkpoint"))
         {
             checkpointIndex++;
+            Debug.Log("Berries: " + berriesCollected + " | Checkpoint: " + checkpointIndex +" | Lap 0:" + berriesLap0.Count + " | Lap 1:" + berriesLap1.Count + " | Lap 2:" + berriesLap2.Count);
+
             switch (checkpointIndex)
             {
                 case 1:
                     foreach (var berry in berriesLap0)
                     {
-                        berry.SetActive(true);
+                        berry?.SetActive(true);
                     }
+                    
                     break;
                 case 2:
+                    previousLapBerries = berriesCollected;
+                    foreach (var berry in berriesLap0)
+                    {
+                        berry?.SetActive(false);
+                    }
                     foreach (var berries in berriesLap1)
                     {
-                        berries.SetActive(true);
+                        berries?.SetActive(true);
+                    }
+                    if (berriesCollected >= berriesLap0.Count)
+                    {
+                        stars++;
+                        js.Boom();
                     }
                     break;
                 case 3:
+                    previousLapBerries = berriesCollected;
+                    foreach (var berry in berriesLap0)
+                    {
+                        berry?.SetActive(false);
+                    }
+                    foreach (var berry in berriesLap1)
+                    {
+                        berry?.SetActive(false);
+                    }
                     foreach (var berries in berriesLap2)
                     {
-                        berries.SetActive(true);
+                        berries?.SetActive(true);
+                    }
+                    if (berriesCollected >= berriesLap0.Count + berriesLap1.Count)
+                    {
+                        stars++;
+                        js.Boom();
                     }
                     break;
+                
                 default:
                     Debug.Log("You Won!");
+                    if (berriesCollected >= berriesLap0.Count + berriesLap1.Count + berriesLap2.Count - 1)
+                    {
+                        stars++;
+                        js.Boom();
+                    }
+                    GameOver?.Invoke();
+
                     break;
             }
 
@@ -279,9 +342,29 @@ public class PlayerMoveController : MonoBehaviour
             {
                 if (other.gameObject == berry)
                 {
+                    int totalBerries = 0;
+                    switch (checkpointIndex - 2)
+                    {
+                        case -1:
+                            totalBerries = berriesLap0.Count;
+                            break;
+                        case 0:
+                            //previousLapBerries += berriesLap0.Count;
+                            totalBerries = berriesLap1.Count;
+                            break;
+                        case 1:
+                            //previousLapBerries += berriesLap1.Count;
+                            totalBerries = berriesLap2.Count;
+                            break;
+                    
+                    }
+
+                    Debug.Log("Checkpoint Index: " +( checkpointIndex - 2 )+ "berriesCollected: " + berriesCollected + " - previousLapBerries: " + previousLapBerries + "totalBerries" + totalBerries);
+
                     berriesCollected++;
                     berryCollectedEvent.Post(this.gameObject);
-                    Destroy(berry);
+                    BerryCollected?.Invoke(berriesCollected - previousLapBerries, totalBerries);
+                    berry.SetActive(false);
                     break; // exit the loop once the object is destroyed
                 }
             }
@@ -304,5 +387,7 @@ public class PlayerMoveController : MonoBehaviour
             _maxMoveSpeed = _maxWalkSpeed;
             Debug.Log("Stop Slow");
         }
-    }
+    }           
+ 
 }
+

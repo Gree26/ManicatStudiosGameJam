@@ -6,6 +6,7 @@
 				<ActorMixer Name="SFX" ID="{4A8921D5-8B10-4669-8D4C-7ED8E226DF2C}" ShortID="307481719">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -303,6 +304,7 @@
 										<Value>39</Value>
 									</ValueList>
 								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<RTPCList>
@@ -337,6 +339,11 @@
 											</Curve>
 										</RTPC>
 									</RTPCList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
 								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
@@ -375,6 +382,11 @@
 									</RTPCList>
 								</Property>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="68"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
@@ -432,6 +444,29 @@
 								<ActiveSource Name="SFX_Acceleration-001" ID="{38E3F13D-7C51-4766-9851-FCD09D921265}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="UI_Click-001" ID="{F7362416-B513-4658-81F6-E66372FC1A8C}" ShortID="319120819">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{D3A72534-2596-49ED-83EA-528AB934FE7F}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_UI_Click-001" ID="{5966DF41-EA8D-4E94-8807-AC6F1ED9E888}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_UI_Click-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="121089721"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_UI_Click-001" ID="{5966DF41-EA8D-4E94-8807-AC6F1ED9E888}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
@@ -449,29 +484,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="UI_Click-001" ID="{F7362416-B513-4658-81F6-E66372FC1A8C}" ShortID="319120819">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0E8C113-BB68-4740-85C1-A71EAADC09B4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{44FEA071-99DB-4670-B5C0-5A6C9D8A7266}" WorkUnitID="{B329D009-AF94-4A34-8F56-B201E1870900}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_UI_Click-001" ID="{5966DF41-EA8D-4E94-8807-AC6F1ED9E888}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_UI_Click-001.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="121089721"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_UI_Click-001" ID="{5966DF41-EA8D-4E94-8807-AC6F1ED9E888}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="UI_CountdownTimer-003" ID="{E499CA14-6C2B-4F6A-A4B3-B11C3462F4ED}" ShortID="327114906">
 							<ReferenceList>
 								<Reference Name="Conversion">

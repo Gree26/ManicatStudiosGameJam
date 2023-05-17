@@ -16,6 +16,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{604C0EC5-227E-4F18-8399-CCF9B8271373}" ShortID="811359661">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PauseMenu" ID="{A830017C-10A1-4F42-BC35-88DA6E47FB2A}" WorkUnitID="{691C610F-BCB7-47F0-BD1B-503879E49835}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Stop_MusicMain" ID="{851677AB-0050-411E-B51D-7D2C2BE81EE1}">
@@ -151,6 +158,84 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_Break-001" ID="{9451E86B-7BD4-4D1B-B075-C3AF02ABC133}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Acceleration" ID="{C980CB0D-236A-47A7-86CE-7DF3C65BE110}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{FFC2E5BD-36B5-4243-9388-91E7FFE453C1}" ShortID="808500564">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Acceleration-001" ID="{0D159B75-8B69-4630-ADBD-DCD2AC629888}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Countdown1" ID="{6E6245B7-8B38-44F5-ADD6-29614B4D7198}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{26F19D86-44BB-4050-88E1-1354EAE91E2C}" ShortID="587684369">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_CountdownTimer-001" ID="{6C0347D9-9583-495B-AC9B-2BFC0D85D857}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Countdown2" ID="{5685EF92-A374-40BD-8A12-DB161E6EDF0D}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{C9CA7B7D-71E9-4438-83B3-905ECA89D292}" ShortID="534543926">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_CountdownTimer-002" ID="{4CCE30E6-97E2-4F38-B675-7D175366BD9E}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Countdown3" ID="{49AACD81-7F81-49B1-9F5A-ABCFCA2EFFE9}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{5EC6A098-C89B-4833-8590-D172CE7A9D27}" ShortID="74912551">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_CountdownTimer-003" ID="{E499CA14-6C2B-4F6A-A4B3-B11C3462F4ED}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Countdown4" ID="{EEBE3BAB-8F2B-4E13-8E62-9D35090D6F0B}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{86FA9ACD-BDF0-4E65-8442-D67DF109C96C}" ShortID="751841319">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_CountdownTimer-004" ID="{6A3B9A34-70A4-4861-B559-B32029F5133C}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

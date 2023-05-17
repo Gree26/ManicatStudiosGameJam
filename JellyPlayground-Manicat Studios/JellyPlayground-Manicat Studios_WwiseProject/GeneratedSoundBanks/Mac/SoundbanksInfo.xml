@@ -11,12 +11,25 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="460494602">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4236875699">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\SFXVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="1548586727" Name="MenuState" ObjectPath="\States\Default Work Unit\MenuState" GUID="{3BAAF80B-EDB0-405F-BE87-40A4F7A3428E}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\MenuState\None" GUID="{A0B0482D-A839-4AA8-A6B6-3EA9DCBA620E}"/>
+						<State Id="89505537" Name="Gameplay" ObjectPath="\States\Default Work Unit\MenuState\Gameplay" GUID="{720F42AF-AE53-475A-B605-95C1ECEED5CC}"/>
+						<State Id="56378966" Name="MenuPause" ObjectPath="\States\Default Work Unit\MenuState\MenuPause" GUID="{71495EA0-E179-406A-8C8C-59340EB9F1A7}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017428748" Language="SFX" Hash="2172984576">
+		<SoundBank Id="3017428748" Language="SFX" Hash="4191653685">
 			<ObjectPath>\SoundBanks\Default Work Unit\MusicBank</ObjectPath>
 			<ShortName>MusicBank</ShortName>
 			<Path>MusicBank.bnk</Path>
@@ -65,11 +78,6 @@
 								<File Id="670126863"/>
 							</Media>
 						</SwitchContainer>
-						<SwitchContainer SwitchValue="{A282911F-A260-4B35-ABA4-660913B6A150}">
-							<Media>
-								<File Id="11827896"/>
-							</Media>
-						</SwitchContainer>
 						<SwitchContainer SwitchValue="{4B2A1330-2EA9-4294-A10D-00227B45D0C2}">
 							<Media>
 								<File Id="11827896"/>
@@ -93,7 +101,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017475316" Language="SFX" Hash="1076082148">
+		<SoundBank Id="3017475316" Language="SFX" Hash="999046126">
 			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
 			<ShortName>SfxBank</ShortName>
 			<Path>SfxBank.bnk</Path>
@@ -138,6 +146,38 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2669705572" Name="Play_Countdown1" ObjectPath="\Events\Default Work Unit\Play_Countdown1" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="811080598" Language="SFX">
+							<ShortName>SFX_CountdownTimer-001.wav</ShortName>
+							<Path>SFX\SFX_CountdownTimer-001_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2669705575" Name="Play_Countdown2" ObjectPath="\Events\Default Work Unit\Play_Countdown2" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="87160608" Language="SFX">
+							<ShortName>SFX_CountdownTimer-002.wav</ShortName>
+							<Path>SFX\SFX_CountdownTimer-002_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2669705574" Name="Play_Countdown3" ObjectPath="\Events\Default Work Unit\Play_Countdown3" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="747142140" Language="SFX">
+							<ShortName>SFX_CountdownTimer-003.wav</ShortName>
+							<Path>SFX\SFX_CountdownTimer-003_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2669705569" Name="Play_Countdown4" ObjectPath="\Events\Default Work Unit\Play_Countdown4" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="200497049" Language="SFX">
+							<ShortName>SFX_CountdownTimer-004.wav</ShortName>
+							<Path>SFX\SFX_CountdownTimer-004_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3989731860" Name="Play_Crouch" ObjectPath="\Events\Default Work Unit\Play_Crouch" DurationType="OneShot" DurationMin="0.296243" DurationMax="0.296243">
 					<IncludedMemoryFiles>
 						<File Id="884275306" Language="SFX">
@@ -162,6 +202,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3178709332" Name="Stop_Acceleration" ObjectPath="\Events\Default Work Unit\Stop_Acceleration" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="53139121" Name="Acceleration_Parameter" ObjectPath="\Game Parameters\Default Work Unit\Acceleration_Parameter"/>

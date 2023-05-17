@@ -5,7 +5,9 @@
 			<ChildrenList>
 				<StateGroup Name="Music_States" ID="{BCF4E616-1045-48BA-83D5-EE3091C779BE}">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
 						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{FCF5BB6B-919D-4E72-AF03-FB17FFFE511B}"/>
@@ -15,6 +17,18 @@
 						<State Name="End" ID="{4840527A-21F2-4B64-BFE4-9285123670CC}"/>
 						<State Name="PauseMenuMusic" ID="{A282911F-A260-4B35-ABA4-660913B6A150}"/>
 						<State Name="TitleMenuMusic" ID="{4B2A1330-2EA9-4294-A10D-00227B45D0C2}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MenuState" ID="{3BAAF80B-EDB0-405F-BE87-40A4F7A3428E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{A0B0482D-A839-4AA8-A6B6-3EA9DCBA620E}"/>
+						<State Name="Gameplay" ID="{720F42AF-AE53-475A-B605-95C1ECEED5CC}"/>
+						<State Name="MenuPause" ID="{71495EA0-E179-406A-8C8C-59340EB9F1A7}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
