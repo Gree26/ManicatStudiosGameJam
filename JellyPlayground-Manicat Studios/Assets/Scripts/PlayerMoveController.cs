@@ -44,6 +44,7 @@ public class PlayerMoveController : MonoBehaviour
     [SerializeField]
     private float _turnSpeed = 0.1f;
 
+    public static int stars = 0;
 
     Vector2 positionModifier = Vector2.zero;
 
@@ -76,6 +77,11 @@ public class PlayerMoveController : MonoBehaviour
     [SerializeField] private bool _isBraking = false;
 
     public GameObject teleportLocation;
+
+    [SerializeField]
+    JumpScare js;
+
+    public static Action GameOver;
 
     private bool isStunned
     {
@@ -266,6 +272,8 @@ public class PlayerMoveController : MonoBehaviour
         if (other.CompareTag("Checkpoint"))
         {
             checkpointIndex++;
+            Debug.Log("Berries: " + berriesCollected + " | Checkpoint: " + checkpointIndex +" | Lap 0:" + berriesLap0.Count + " | Lap 1:" + berriesLap1.Count + " | Lap 2:" + berriesLap2.Count);
+
             switch (checkpointIndex)
             {
                 case 1:
@@ -273,6 +281,7 @@ public class PlayerMoveController : MonoBehaviour
                     {
                         berry?.SetActive(true);
                     }
+                    
                     break;
                 case 2:
                     previousLapBerries = berriesCollected;
@@ -283,6 +292,11 @@ public class PlayerMoveController : MonoBehaviour
                     foreach (var berries in berriesLap1)
                     {
                         berries?.SetActive(true);
+                    }
+                    if (berriesCollected >= berriesLap0.Count)
+                    {
+                        stars++;
+                        js.Boom();
                     }
                     break;
                 case 3:
@@ -299,10 +313,22 @@ public class PlayerMoveController : MonoBehaviour
                     {
                         berries?.SetActive(true);
                     }
+                    if (berriesCollected >= berriesLap0.Count + berriesLap1.Count)
+                    {
+                        stars++;
+                        js.Boom();
+                    }
                     break;
                 
                 default:
                     Debug.Log("You Won!");
+                    if (berriesCollected >= berriesLap0.Count + berriesLap1.Count + berriesLap2.Count - 1)
+                    {
+                        stars++;
+                        js.Boom();
+                    }
+                    GameOver?.Invoke();
+
                     break;
             }
 
@@ -317,20 +343,24 @@ public class PlayerMoveController : MonoBehaviour
                 if (other.gameObject == berry)
                 {
                     int totalBerries = 0;
-                    switch (checkpointIndex-1)
+                    switch (checkpointIndex - 2)
                     {
-                        case 0:
+                        case -1:
                             totalBerries = berriesLap0.Count;
                             break;
-                        case 1:
+                        case 0:
+                            //previousLapBerries += berriesLap0.Count;
                             totalBerries = berriesLap1.Count;
-                            previousLapBerries += berriesLap0.Count;
                             break;
-                        case 2:
+                        case 1:
+                            //previousLapBerries += berriesLap1.Count;
                             totalBerries = berriesLap2.Count;
-                            previousLapBerries += berriesLap1.Count;
                             break;
+                    
                     }
+
+                    Debug.Log("Checkpoint Index: " +( checkpointIndex - 2 )+ "berriesCollected: " + berriesCollected + " - previousLapBerries: " + previousLapBerries + "totalBerries" + totalBerries);
+
                     berriesCollected++;
                     berryCollectedEvent.Post(this.gameObject);
                     BerryCollected?.Invoke(berriesCollected - previousLapBerries, totalBerries);

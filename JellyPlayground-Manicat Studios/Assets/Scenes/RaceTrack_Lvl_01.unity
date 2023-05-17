@@ -2977,6 +2977,7 @@ MonoBehaviour:
   _brakeForce: 0.1
   _isBraking: 0
   teleportLocation: {fileID: 540725843}
+  js: {fileID: 1613167532}
 --- !u!54 &152121962
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47119,6 +47120,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 09892e65cf27b2b4db57e58de940aa9d, type: 3}
   m_PrefabInstance: {fileID: 1627563462}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1613167532 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3447021463067311958, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+  m_PrefabInstance: {fileID: 4750894787641297615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f1f967c1b53584f9b23978362b2114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1616152694
 PrefabInstance:
   m_ObjectHideFlags: 0

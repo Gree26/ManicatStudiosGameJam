@@ -12,6 +12,9 @@ public class IngameMenuController : MonoBehaviour
     private Page _pauseMenu;
     [SerializeField]
     private Page _infoMenu;
+    [SerializeField]
+    private Page _gameOverPage;
+
     private UiController _uiController;
 
     [SerializeField]
@@ -31,6 +34,12 @@ public class IngameMenuController : MonoBehaviour
     [SerializeField] private AK.Wwise.Event stopMusicEvent;
     [SerializeField] private AK.Wwise.Event playMusicEvent;
 
+    [SerializeField]
+    StarUIHandler _starController;
+
+    [SerializeField]
+    StarUIHandler _endGameStarController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +48,7 @@ public class IngameMenuController : MonoBehaviour
 
         accelerationEvent = GameObject.Find("Jelly").GetComponent<PlayerMoveController>().accelerationEvent;
         PlayerMoveController.BerryCollected += BerriesColected;
+        PlayerMoveController.GameOver += GameOver;
         StartCoroutine(Countdown());
     }
 
@@ -52,6 +62,7 @@ public class IngameMenuController : MonoBehaviour
             //Enter
             AkSoundEngine.SetState("MenuState","MenuPause");
             accelerationEvent.Stop(GameObject.Find("Jelly"));
+            _starController.UpdateStars(PlayerMoveController.stars);
         }
         else
         {
@@ -108,6 +119,17 @@ public class IngameMenuController : MonoBehaviour
         playMusicEvent.Post(this.gameObject);
         accelerationEvent.Post(GameObject.Find("Jelly"));
         Time.timeScale = 1;
+    }
+
+    private void GameOver()
+    {
+        InputHandler.instance.LockMouse(false);
+        _uiController.PushPage(_gameOverPage);
+        Time.timeScale = 0;
+        //Enter
+        AkSoundEngine.SetState("MenuState", "MenuPause");
+        accelerationEvent.Stop(GameObject.Find("Jelly"));
+        _endGameStarController.UpdateStars(PlayerMoveController.stars);
     }
 
     private void BerriesColected(int numberCollceted, int numberLeft) => _berryCounter.ChangeValues(numberCollceted, numberLeft);
