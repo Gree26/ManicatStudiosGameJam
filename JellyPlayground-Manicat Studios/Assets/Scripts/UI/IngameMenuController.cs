@@ -60,6 +60,7 @@ public class IngameMenuController : MonoBehaviour
                 Time.timeScale = 1;
                 AkSoundEngine.SetState("MenuState", "Gameplay");
                 accelerationEvent.Post(GameObject.Find("Jelly"));
+
             }
         }
     }
@@ -89,6 +90,7 @@ public class IngameMenuController : MonoBehaviour
 
     private IEnumerator Countdown()
     {
+        accelerationEvent.Stop(GameObject.Find("Jelly"));
         stopMusicEvent.Post(this.gameObject);
         Time.timeScale = 0;
         int pos = 0;
@@ -102,6 +104,7 @@ public class IngameMenuController : MonoBehaviour
         _countdownImage.gameObject.SetActive(false);
         countdownEvents[3].Post(this.gameObject);
         playMusicEvent.Post(this.gameObject);
+        accelerationEvent.Post(GameObject.Find("Jelly"));
         Time.timeScale = 1;
     }
 

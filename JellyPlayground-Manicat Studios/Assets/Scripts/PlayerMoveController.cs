@@ -95,7 +95,7 @@ public class PlayerMoveController : MonoBehaviour
         _scale = this.transform.localScale;
         checkpointIndex = 0;
 
-        accelerationEvent.Post(this.gameObject);
+
 
         _currentTime = 0;
     }
