@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\UnityProjects\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\P1-OM_Game\Githubs\GameJam\ManicatStudiosGameJam\JellyPlayground-Manicat Studios\JellyPlayground-Manicat Studios_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3949990580">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4236875699">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -29,7 +29,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017428748" Language="SFX" Hash="4191653685">
+		<SoundBank Id="3017428748" Language="SFX" Hash="116908366">
 			<ObjectPath>\SoundBanks\Default Work Unit\MusicBank</ObjectPath>
 			<ShortName>MusicBank</ShortName>
 			<Path>MusicBank.bnk</Path>
@@ -101,7 +101,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3017475316" Language="SFX" Hash="3362195067">
+		<SoundBank Id="3017475316" Language="SFX" Hash="896157598">
 			<ObjectPath>\SoundBanks\Default Work Unit\SfxBank</ObjectPath>
 			<ShortName>SfxBank</ShortName>
 			<Path>SfxBank.bnk</Path>

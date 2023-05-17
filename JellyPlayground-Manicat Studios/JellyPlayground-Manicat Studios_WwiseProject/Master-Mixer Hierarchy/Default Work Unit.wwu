@@ -45,6 +45,11 @@
 								</Property>
 								<Property Name="Color" Type="int16" Value="10"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ChildrenList>
 								<Bus Name="InGame" ID="{A5445A91-2DF9-4A27-8D93-2849A8694E23}">

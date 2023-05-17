@@ -6,6 +6,7 @@
 				<ActorMixer Name="SFX" ID="{4A8921D5-8B10-4669-8D4C-7ED8E226DF2C}" ShortID="307481719">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -303,6 +304,7 @@
 										<Value>39</Value>
 									</ValueList>
 								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<RTPCList>
@@ -337,6 +339,11 @@
 											</Curve>
 										</RTPC>
 									</RTPCList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
 								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
@@ -375,6 +382,11 @@
 									</RTPCList>
 								</Property>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="68"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
