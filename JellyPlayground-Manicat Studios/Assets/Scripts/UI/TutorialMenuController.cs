@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(UiController))]
-public class MainMenuController : MonoBehaviour
+public class TutorialMenuController : MonoBehaviour
 {
     [SerializeField]
     private Page _mainMenu;
     [SerializeField]
     private UiController _uiController;
-    private Page _creditScene;
 
     // Start is called before the first frame update
     void Start()
@@ -45,14 +44,13 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void QuitGame()
+    public void BackToMainMenu()
     {
-        Debug.Log("Come back soon!");
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 
-    public void CreditPage()
+    public void Tutorial()
     {
-        _uiController.PushPage(_creditScene);
+        Debug.Log("Tutorial video is supposed to be here");
     }
 }
