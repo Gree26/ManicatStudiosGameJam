@@ -56,7 +56,7 @@ public class PlayerMoveController : MonoBehaviour
 
     [SerializeField] public List<GameObject> berriesLap0;
     [SerializeField] public List<GameObject> berriesLap1;
-    [SerializeField] public List<GameObject> berriesLap2;
+    [SerializeField] public List<GameObject> berriesLap2;  
 
     //Sound------------------------------------------------
     [SerializeField] AK.Wwise.Event jumpEvent;
@@ -241,7 +241,7 @@ public class PlayerMoveController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //prismo Lower Bounds Teleport
+           //prismo Lower Bounds Teleport
         if (other.CompareTag("boundary"))
         {
             // Teleport the player to the specified location
@@ -293,6 +293,7 @@ public class PlayerMoveController : MonoBehaviour
                         berries?.SetActive(true);
                     }
                     break;
+                
                 default:
                     Debug.Log("You Won!");
                     break;
