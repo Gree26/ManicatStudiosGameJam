@@ -72,6 +72,8 @@ public class PlayerMoveController : MonoBehaviour
     [SerializeField] private float _brakeForce = 0.001f;
     [SerializeField] private bool _isBraking = false;
 
+    public GameObject teleportLocation;
+
     private bool isStunned
     {
         set
@@ -239,7 +241,14 @@ public class PlayerMoveController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(LayerMask.LayerToName( other.gameObject.layer) == "Berry")
+        //prismo Lower Bounds Teleport
+        if (other.CompareTag("boundary"))
+        {
+            // Teleport the player to the specified location
+            transform.position = teleportLocation.transform.position;
+        }
+
+        if (LayerMask.LayerToName( other.gameObject.layer) == "Berry")
             Boost();  
 
             //EDITED BY MIKOANGELO
@@ -324,5 +333,7 @@ public class PlayerMoveController : MonoBehaviour
             _maxMoveSpeed = _maxWalkSpeed;
             Debug.Log("Stop Slow");
         }
-    }
+    }           
+ 
 }
+
