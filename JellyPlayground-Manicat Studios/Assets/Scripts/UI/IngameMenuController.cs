@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(UiController))]
 public class IngameMenuController : MonoBehaviour
@@ -12,6 +13,13 @@ public class IngameMenuController : MonoBehaviour
     private Page _infoMenu;
     private UiController _uiController;
 
+    [SerializeField]
+    private Image _countdownImage;
+
+    [SerializeField]
+    private List<Sprite> _countdownSprites;
+
+    [HideInInspector]
     public AK.Wwise.Event accelerationEvent;
 
     // Start is called before the first frame update
@@ -21,6 +29,7 @@ public class IngameMenuController : MonoBehaviour
         InputHandler.instance.Escape += Back;
 
         accelerationEvent = GameObject.Find("Jelly").GetComponent<PlayerMoveController>().accelerationEvent;
+        StartCoroutine(Countdown());
     }
 
     public void Back()
@@ -71,6 +80,20 @@ public class IngameMenuController : MonoBehaviour
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
         AkSoundEngine.StopAll();
         
+    }
+
+    private IEnumerator Countdown()
+    {
+        Time.timeScale = 0;
+        int pos = 0;
+        while (pos < _countdownSprites.Count)
+        {
+            _countdownImage.sprite = _countdownSprites[pos];
+            pos++;
+            yield return new WaitForSecondsRealtime(1);
+        }
+        _countdownImage.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 
 }

@@ -2896,8 +2896,8 @@ MonoBehaviour:
   _slowMoveSpeed: 3
   _capSpeed: 15
   checkpointIndex: 0
-  _moveSpeedDrag: -0.01
-  _moveSpeedAcceleration: 0.07
+  _moveSpeedDrag: -0.04
+  _moveSpeedAcceleration: 0.1
   _turnSpeed: 2
   berriesCollected: 0
   berries:
