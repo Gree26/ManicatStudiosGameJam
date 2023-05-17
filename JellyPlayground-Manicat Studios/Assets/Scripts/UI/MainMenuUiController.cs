@@ -24,6 +24,7 @@ public class MainMenuUiController : MonoBehaviour
     {
         Destroy(this._WwObj);
         SceneManager.LoadScene("RaceTrack_Lvl_01", LoadSceneMode.Single);
+        AkSoundEngine.StopAll();
     }
 
     public void QuitPressed()
