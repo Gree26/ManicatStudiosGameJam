@@ -7,6 +7,7 @@ public class UISounds : MonoBehaviour
     [SerializeField] List<AK.Wwise.Event> sfxEvents;
     [SerializeField] AK.Wwise.RTPC sfxVolume;
     [SerializeField] AK.Wwise.RTPC musicVolume;
+    [SerializeField] AK.Wwise.Event stopMusicEvent;
 
     private int musicCounter = 1;
     private int sfxCounter = 1;
@@ -52,6 +53,11 @@ public class UISounds : MonoBehaviour
     {
         musicCounter++;
     }
+
+    public void StopMusic() 
+    {
+        stopMusicEvent.Post(this.gameObject);
+    } 
 
 
 }

@@ -35118,6 +35118,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 5e7944aebf4fdad48831174cd7bbadc8, type: 2}
+  stopMusicEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cfbf2c3bcfdf44d4a91ddd25ea9e3c98, type: 2}
 --- !u!4 &1228056972
 Transform:
   m_ObjectHideFlags: 0
