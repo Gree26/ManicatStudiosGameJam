@@ -47,7 +47,7 @@ public class IngameMenuController : MonoBehaviour
         InputHandler.instance.Escape += Back;
 
         accelerationEvent = GameObject.Find("Jelly").GetComponent<PlayerMoveController>().accelerationEvent;
-        PlayerMoveController.BerryCollected += BerriesColected;
+        PlayerMoveController.BerryCollected += BerriesCollected;
         PlayerMoveController.GameOver += GameOver;
         StartCoroutine(Countdown());
     }
@@ -139,5 +139,5 @@ public class IngameMenuController : MonoBehaviour
         _endGameStarController.UpdateStars(PlayerMoveController.stars);
     }
 
-    private void BerriesColected(int numberCollceted, int numberLeft) => _berryCounter.ChangeValues(numberCollceted, numberLeft);
+    private void BerriesCollected(int numberCollected, int numberLeft) => _berryCounter.ChangeValues(numberCollected, numberLeft);
 }

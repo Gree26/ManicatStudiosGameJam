@@ -252,7 +252,7 @@ public class PlayerMoveController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-           //prismo Lower Bounds Teleport
+           //Lower Bounds Teleport
         if (other.CompareTag("boundary"))
         {
             // Teleport the player to the specified location
@@ -273,7 +273,7 @@ public class PlayerMoveController : MonoBehaviour
         {
             checkpointIndex++;
             Debug.Log("Berries: " + berriesCollected + " | Checkpoint: " + checkpointIndex +" | Lap 0:" + berriesLap0.Count + " | Lap 1:" + berriesLap1.Count + " | Lap 2:" + berriesLap2.Count);
-
+            
             switch (checkpointIndex)
             {
                 case 1:
@@ -363,8 +363,9 @@ public class PlayerMoveController : MonoBehaviour
 
                     berriesCollected++;
                     berryCollectedEvent.Post(this.gameObject);
-                    BerryCollected?.Invoke(berriesCollected - previousLapBerries, totalBerries);
                     berry.SetActive(false);
+                    BerryCollected?.Invoke(berriesCollected - previousLapBerries, totalBerries);
+                    
                     break; // exit the loop once the object is destroyed
                 }
             }
