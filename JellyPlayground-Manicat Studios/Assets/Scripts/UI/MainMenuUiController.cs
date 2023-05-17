@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 [RequireComponent(typeof(UiController))]
 public class MainMenuUiController : MonoBehaviour
 {
-    private UiController _uiController;
+    [SerializeField]
+    private GameObject _WwObj;
 
+    private UiController _uiController;    
     [SerializeField]
     private Page _credits;
 
@@ -19,6 +22,7 @@ public class MainMenuUiController : MonoBehaviour
 
     public void PlayPressed()
     {
+        Destroy(this._WwObj);
         SceneManager.LoadScene("RaceTrack_Lvl_01", LoadSceneMode.Single);
     }
 
