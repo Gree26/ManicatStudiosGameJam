@@ -266,31 +266,31 @@ public class PlayerMoveController : MonoBehaviour
                 case 1:
                     foreach (var berry in berriesLap0)
                     {
-                        berry.SetActive(true);
+                        berry?.SetActive(true);
                     }
                     break;
                 case 2:
                     foreach (var berry in berriesLap0)
                     {
-                        berry.SetActive(false);
+                        berry?.SetActive(false);
                     }
                     foreach (var berries in berriesLap1)
                     {
-                        berries.SetActive(true);
+                        berries?.SetActive(true);
                     }
                     break;
                 case 3:
                     foreach (var berry in berriesLap0)
                     {
-                        berry.SetActive(false);
+                        berry?.SetActive(false);
                     }
                     foreach (var berry in berriesLap1)
                     {
-                        berry.SetActive(false);
+                        berry?.SetActive(false);
                     }
                     foreach (var berries in berriesLap2)
                     {
-                        berries.SetActive(true);
+                        berries?.SetActive(true);
                     }
                     break;
                 default:
@@ -310,7 +310,7 @@ public class PlayerMoveController : MonoBehaviour
                 {
                     berriesCollected++;
                     berryCollectedEvent.Post(this.gameObject);
-                    Destroy(berry);
+                    berry.SetActive(false);
                     break; // exit the loop once the object is destroyed
                 }
             }
