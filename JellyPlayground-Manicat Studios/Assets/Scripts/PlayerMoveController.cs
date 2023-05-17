@@ -62,7 +62,7 @@ public class PlayerMoveController : MonoBehaviour
     [SerializeField] AK.Wwise.Event jumpEvent;
     [SerializeField] AK.Wwise.Event crouchEvent;
     [SerializeField] AK.Wwise.Event collisionEvent;
-    [SerializeField] AK.Wwise.Event accelerationEvent;
+    [SerializeField] public AK.Wwise.Event accelerationEvent;
     [SerializeField] AK.Wwise.Event berryCollectedEvent;
     [SerializeField] AK.Wwise.Event breakEvent;
     [SerializeField] AK.Wwise.Event slideEvent;
@@ -71,6 +71,8 @@ public class PlayerMoveController : MonoBehaviour
 
     [SerializeField] private float _brakeForce = 0.001f;
     [SerializeField] private bool _isBraking = false;
+
+    public GameObject teleportLocation;
 
     private bool isStunned
     {
@@ -126,8 +128,11 @@ public class PlayerMoveController : MonoBehaviour
             GameDataManager.isSpeed = false;
             isStunned = true;
         }
-        RTPC_Acceleration.SetValue(this.gameObject,_moveSpeed);
+
+        
         _currentTime += Time.deltaTime;
+
+        RTPC_Acceleration.SetValue(this.gameObject, _moveSpeed);
 
     }
 
@@ -236,7 +241,14 @@ public class PlayerMoveController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(LayerMask.LayerToName( other.gameObject.layer) == "Berry")
+        //prismo Lower Bounds Teleport
+        if (other.CompareTag("boundary"))
+        {
+            // Teleport the player to the specified location
+            transform.position = teleportLocation.transform.position;
+        }
+
+        if (LayerMask.LayerToName( other.gameObject.layer) == "Berry")
             Boost();  
 
             //EDITED BY MIKOANGELO
@@ -254,31 +266,31 @@ public class PlayerMoveController : MonoBehaviour
                 case 1:
                     foreach (var berry in berriesLap0)
                     {
-                        berry.SetActive(true);
+                        berry?.SetActive(true);
                     }
                     break;
                 case 2:
                     foreach (var berry in berriesLap0)
                     {
-                        berry.SetActive(false);
+                        berry?.SetActive(false);
                     }
                     foreach (var berries in berriesLap1)
                     {
-                        berries.SetActive(true);
+                        berries?.SetActive(true);
                     }
                     break;
                 case 3:
                     foreach (var berry in berriesLap0)
                     {
-                        berry.SetActive(false);
+                        berry?.SetActive(false);
                     }
                     foreach (var berry in berriesLap1)
                     {
-                        berry.SetActive(false);
+                        berry?.SetActive(false);
                     }
                     foreach (var berries in berriesLap2)
                     {
-                        berries.SetActive(true);
+                        berries?.SetActive(true);
                     }
                     break;
                 default:
@@ -298,7 +310,7 @@ public class PlayerMoveController : MonoBehaviour
                 {
                     berriesCollected++;
                     berryCollectedEvent.Post(this.gameObject);
-                    Destroy(berry);
+                    berry.SetActive(false);
                     break; // exit the loop once the object is destroyed
                 }
             }
@@ -321,5 +333,7 @@ public class PlayerMoveController : MonoBehaviour
             _maxMoveSpeed = _maxWalkSpeed;
             Debug.Log("Stop Slow");
         }
-    }
+    }           
+ 
 }
+

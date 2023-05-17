@@ -12,13 +12,15 @@ public class IngameMenuController : MonoBehaviour
     private Page _infoMenu;
     private UiController _uiController;
 
-    public AK.Wwise.State current;
+    public AK.Wwise.Event accelerationEvent;
 
     // Start is called before the first frame update
     void Start()
     {
         _uiController = this.GetComponent<UiController>();
         InputHandler.instance.Escape += Back;
+
+        accelerationEvent = GameObject.Find("Jelly").GetComponent<PlayerMoveController>().accelerationEvent;
     }
 
     public void Back()
@@ -30,6 +32,9 @@ public class IngameMenuController : MonoBehaviour
             Time.timeScale = 0;
             //Enter
             AkSoundEngine.SetState("MenuState","MenuPause");
+            accelerationEvent.Stop(GameObject.Find("Jelly"));
+            
+            
 
         }
         else
@@ -40,6 +45,7 @@ public class IngameMenuController : MonoBehaviour
                 InputHandler.instance.LockMouse(true);
                 Time.timeScale = 1;
                 AkSoundEngine.SetState("MenuState", "Gameplay");
+                accelerationEvent.Post(GameObject.Find("Jelly"));
             }
         }
     }
@@ -55,6 +61,7 @@ public class IngameMenuController : MonoBehaviour
         InputHandler.instance.LockMouse(true);
         Time.timeScale = 1;
         AkSoundEngine.SetState("MenuState", "Gameplay");
+        accelerationEvent.Post(GameObject.Find("Jelly"));
     }
 
     public void RestartLevel()
