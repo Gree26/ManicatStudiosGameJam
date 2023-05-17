@@ -8,6 +8,9 @@ using UnityEngine;
 /// </summary>
 public class InputHandler : MonoBehaviour
 {
+
+    public bool lockCursorOnStart = true;
+
     private static InputHandler singletonInstance;
     public static InputHandler instance
     {
@@ -45,8 +48,8 @@ public class InputHandler : MonoBehaviour
             Debug.LogError("Multiple instances of the singleton 'InputHandler' exist.");
             Destroy(this);
         }
-
-        LockMouse(true);
+        if(lockCursorOnStart) 
+            LockMouse(true);
     }
 
     // Update is called once per frame
