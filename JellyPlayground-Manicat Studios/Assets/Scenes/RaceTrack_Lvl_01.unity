@@ -21126,7 +21126,7 @@ GameObject:
   - component: {fileID: 797357860}
   m_Layer: 0
   m_Name: CheckpointEndBerry
-  m_TagString: Checkpoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39579,6 +39579,23 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1460490088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7751122609574323572, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+  m_PrefabInstance: {fileID: 4750894787641297615}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1460490093
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460490088}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1462936752
 PrefabInstance:
   m_ObjectHideFlags: 0

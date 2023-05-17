@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,6 +54,8 @@ public class PlayerMoveController : MonoBehaviour
     //Berries Collected
     [SerializeField] int berriesCollected;
     [SerializeField] List<GameObject> berries;
+    public static Action<int, int> BerryCollected;
+
 
     [SerializeField] public List<GameObject> berriesLap0;
     [SerializeField] public List<GameObject> berriesLap1;
@@ -239,6 +242,8 @@ public class PlayerMoveController : MonoBehaviour
         _isBraking = isBraking;
     }
 
+    private int previousLapBerries = 0;
+
     private void OnTriggerEnter(Collider other)
     {
            //prismo Lower Bounds Teleport
@@ -270,6 +275,7 @@ public class PlayerMoveController : MonoBehaviour
                     }
                     break;
                 case 2:
+                    previousLapBerries = berriesCollected;
                     foreach (var berry in berriesLap0)
                     {
                         berry?.SetActive(false);
@@ -280,6 +286,7 @@ public class PlayerMoveController : MonoBehaviour
                     }
                     break;
                 case 3:
+                    previousLapBerries = berriesCollected;
                     foreach (var berry in berriesLap0)
                     {
                         berry?.SetActive(false);
@@ -309,8 +316,24 @@ public class PlayerMoveController : MonoBehaviour
             {
                 if (other.gameObject == berry)
                 {
+                    int totalBerries = 0;
+                    switch (checkpointIndex-1)
+                    {
+                        case 0:
+                            totalBerries = berriesLap0.Count;
+                            break;
+                        case 1:
+                            totalBerries = berriesLap1.Count;
+                            previousLapBerries += berriesLap0.Count;
+                            break;
+                        case 2:
+                            totalBerries = berriesLap2.Count;
+                            previousLapBerries += berriesLap1.Count;
+                            break;
+                    }
                     berriesCollected++;
                     berryCollectedEvent.Post(this.gameObject);
+                    BerryCollected?.Invoke(berriesCollected - previousLapBerries, totalBerries);
                     berry.SetActive(false);
                     break; // exit the loop once the object is destroyed
                 }

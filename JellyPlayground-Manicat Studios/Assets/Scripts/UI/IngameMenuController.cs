@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,9 @@ public class IngameMenuController : MonoBehaviour
     [SerializeField]
     private List<Sprite> _countdownSprites;
 
+    [SerializeField]
+    private BerryCounter _berryCounter;
+
     [HideInInspector]
     public AK.Wwise.Event accelerationEvent;
 
@@ -34,6 +38,7 @@ public class IngameMenuController : MonoBehaviour
         InputHandler.instance.Escape += Back;
 
         accelerationEvent = GameObject.Find("Jelly").GetComponent<PlayerMoveController>().accelerationEvent;
+        PlayerMoveController.BerryCollected += BerriesColected;
         StartCoroutine(Countdown());
     }
 
@@ -47,9 +52,6 @@ public class IngameMenuController : MonoBehaviour
             //Enter
             AkSoundEngine.SetState("MenuState","MenuPause");
             accelerationEvent.Stop(GameObject.Find("Jelly"));
-            
-            
-
         }
         else
         {
@@ -108,4 +110,5 @@ public class IngameMenuController : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    private void BerriesColected(int numberCollceted, int numberLeft) => _berryCounter.ChangeValues(numberCollceted, numberLeft);
 }
