@@ -78,6 +78,12 @@ public class IngameMenuController : MonoBehaviour
         }
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Reload");
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
     public void OpenInfoPage()
     {
         _uiController.PushPage(_infoMenu);
