@@ -181,6 +181,66 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Countdown1" ID="{6E6245B7-8B38-44F5-ADD6-29614B4D7198}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{26F19D86-44BB-4050-88E1-1354EAE91E2C}" ShortID="587684369">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_CountdownTimer-001" ID="{6C0347D9-9583-495B-AC9B-2BFC0D85D857}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Countdown2" ID="{5685EF92-A374-40BD-8A12-DB161E6EDF0D}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{C9CA7B7D-71E9-4438-83B3-905ECA89D292}" ShortID="534543926">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_CountdownTimer-002" ID="{4CCE30E6-97E2-4F38-B675-7D175366BD9E}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Countdown3" ID="{49AACD81-7F81-49B1-9F5A-ABCFCA2EFFE9}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{5EC6A098-C89B-4833-8590-D172CE7A9D27}" ShortID="74912551">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_CountdownTimer-003" ID="{E499CA14-6C2B-4F6A-A4B3-B11C3462F4ED}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Countdown4" ID="{EEBE3BAB-8F2B-4E13-8E62-9D35090D6F0B}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{86FA9ACD-BDF0-4E65-8442-D67DF109C96C}" ShortID="751841319">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_CountdownTimer-004" ID="{6A3B9A34-70A4-4861-B559-B32029F5133C}" WorkUnitID="{6CB0D297-0768-4388-ADBC-6225748ABB35}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

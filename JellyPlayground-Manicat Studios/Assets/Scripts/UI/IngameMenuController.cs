@@ -22,6 +22,11 @@ public class IngameMenuController : MonoBehaviour
     [HideInInspector]
     public AK.Wwise.Event accelerationEvent;
 
+    [SerializeField]
+    private List<AK.Wwise.Event> countdownEvents;
+    [SerializeField] private AK.Wwise.Event stopMusicEvent;
+    [SerializeField] private AK.Wwise.Event playMusicEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,15 +89,19 @@ public class IngameMenuController : MonoBehaviour
 
     private IEnumerator Countdown()
     {
+        stopMusicEvent.Post(this.gameObject);
         Time.timeScale = 0;
         int pos = 0;
         while (pos < _countdownSprites.Count)
         {
+            countdownEvents[pos].Post(this.gameObject);
             _countdownImage.sprite = _countdownSprites[pos];
             pos++;
             yield return new WaitForSecondsRealtime(1);
         }
         _countdownImage.gameObject.SetActive(false);
+        countdownEvents[3].Post(this.gameObject);
+        playMusicEvent.Post(this.gameObject);
         Time.timeScale = 1;
     }
 

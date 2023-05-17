@@ -18,6 +18,10 @@ namespace AK
         static const AkUniqueID PLAY_BREAK = 3908484415U;
         static const AkUniqueID PLAY_CLICK = 311910498U;
         static const AkUniqueID PLAY_COLLISION = 1553219250U;
+        static const AkUniqueID PLAY_COUNTDOWN1 = 2669705572U;
+        static const AkUniqueID PLAY_COUNTDOWN2 = 2669705575U;
+        static const AkUniqueID PLAY_COUNTDOWN3 = 2669705574U;
+        static const AkUniqueID PLAY_COUNTDOWN4 = 2669705569U;
         static const AkUniqueID PLAY_CROUCH = 3989731860U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_MUSICMAIN = 3170845728U;

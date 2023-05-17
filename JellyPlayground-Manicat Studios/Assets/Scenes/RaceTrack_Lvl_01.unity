@@ -54614,7 +54614,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008558556}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95860a6436e4b1f46abc342e3076c4d6, type: 3}
   m_Name: 
@@ -67964,6 +67964,38 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1755142767748563720, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+      propertyPath: countdownEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755142767748563720, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+      propertyPath: musicEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c67240957a8251b4c9a1bf4979eb4330, type: 2}
+    - target: {fileID: 1755142767748563720, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+      propertyPath: playMusicEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c67240957a8251b4c9a1bf4979eb4330, type: 2}
+    - target: {fileID: 1755142767748563720, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+      propertyPath: stopMusicEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: cfbf2c3bcfdf44d4a91ddd25ea9e3c98, type: 2}
+    - target: {fileID: 1755142767748563720, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+      propertyPath: countdownEvents.Array.data[0].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a3d63ca93cbed340a23577e6cecc0fd, type: 2}
+    - target: {fileID: 1755142767748563720, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+      propertyPath: countdownEvents.Array.data[1].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: dd1e931ba650fff4caf3036421832f31, type: 2}
+    - target: {fileID: 1755142767748563720, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+      propertyPath: countdownEvents.Array.data[2].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ede72c8c7ce849f47b3146b8edf940c4, type: 2}
+    - target: {fileID: 1755142767748563720, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
+      propertyPath: countdownEvents.Array.data[3].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e97a200a2ac08445a9a9ef19234bc5f, type: 2}
     - target: {fileID: 3654885278433609067, guid: c86e67bf29b1dc44eb40ebd4d9b7f87f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
