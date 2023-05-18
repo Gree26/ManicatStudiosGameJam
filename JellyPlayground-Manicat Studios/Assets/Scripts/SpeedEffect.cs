@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpeedEffect : MonoBehaviour
 {
@@ -14,14 +15,24 @@ public class SpeedEffect : MonoBehaviour
 
     private void Start()
     {
-        GameDataManager.isSpeedChanged += makeVisable;
         _cam = this.GetComponent<Camera>();
         _baseFov = _cam.fieldOfView;
         _speedEffectSystem = _speedEffectObject.GetComponent<ParticleSystem>();
     }
 
+    private void OnEnable()
+    {
+        GameDataManager.isSpeedChanged += makeVisable;
+    }
+
+    private void OnDisable()
+    {
+        GameDataManager.isSpeedChanged -= makeVisable;
+    }
+
     private void makeVisable(bool isItVisable)
     {
+
         _speedEffectObject.SetActive(isItVisable);
 
         if (isItVisable)

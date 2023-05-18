@@ -44,12 +44,23 @@ public class IngameMenuController : MonoBehaviour
     void Start()
     {
         _uiController = this.GetComponent<UiController>();
-        InputHandler.instance.Escape += Back;
-
         accelerationEvent = GameObject.Find("Jelly").GetComponent<PlayerMoveController>().accelerationEvent;
+        StartCoroutine(Countdown());
+        InputHandler.instance.Escape += Back;
         PlayerMoveController.BerryCollected += BerriesCollected;
         PlayerMoveController.GameOver += GameOver;
-        StartCoroutine(Countdown());
+    }
+
+    private void OnEnable()
+    {
+        
+    }
+
+    private void OnDisable()
+    {
+        InputHandler.instance.Escape -= Back;
+        PlayerMoveController.BerryCollected -= BerriesCollected;
+        PlayerMoveController.GameOver -= GameOver;
     }
 
     public void Back()
